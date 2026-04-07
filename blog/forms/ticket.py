@@ -9,38 +9,21 @@ from ..models.tag import normalize_tag_name
 from ..rich_text import sanitize_rich_text
 
 
-DEFAULT_DESCRIPTION_TEMPLATE = """En tant qu’utilisateur :
--
-
-Description développeur :
--
-
-Règles métier :
--
-
-Done quand :
-- 
-"""
-
-
 class TicketForm(forms.ModelForm):
     tags_input = forms.CharField(
         label="Tags",
         required=False,
-        help_text="Enter comma-separated tags. Existing tags are reused automatically.",
     )
     blocked_by_tickets = forms.ModelMultipleChoiceField(
         queryset=Ticket.objects.none(),
         required=False,
         label="Blocked by",
-        help_text="Tickets that must be completed before this one.",
         widget=forms.SelectMultiple(attrs={"class": "form-control", "size": 6}),
     )
     relates_to_tickets = forms.ModelMultipleChoiceField(
         queryset=Ticket.objects.none(),
         required=False,
         label="Relates to",
-        help_text="Related tickets shown from both sides.",
         widget=forms.SelectMultiple(attrs={"class": "form-control", "size": 6}),
     )
 
@@ -58,17 +41,16 @@ class TicketForm(forms.ModelForm):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
+        for field in self.fields.values():
+            field.help_text = None
         self.fields["blocked_by_tickets"].label_from_instance = self._ticket_label
         self.fields["relates_to_tickets"].label_from_instance = self._ticket_label
-
-        if not self.instance.pk and not self.is_bound:
-            self.fields["description"].initial = DEFAULT_DESCRIPTION_TEMPLATE
 
         if self.instance.pk:
             self._init_tags_field()
             self._init_link_fields()
             self.fields["initial_load"].disabled = True
-            self.fields["initial_load"].help_text = "Initial load can only be set when the ticket is created."
+            self.fields["initial_load"].help_text = None
 
     def _init_tags_field(self):
         self.fields["tags_input"].initial = ", ".join(
