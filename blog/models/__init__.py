@@ -1,4 +1,5 @@
 from .core import Project, ProjectMember, GitRepository
+from .git_commit import GitCommit, TicketCommitLink
 from .sprint import Sprint, SprintUserCapacity
 from .story_points import StoryPointsScheme
 from .tag import Tag, normalize_tag_name
@@ -10,6 +11,8 @@ __all__ = [
     "Project",
     "ProjectMember",
     "GitRepository",
+    "GitCommit",
+    "TicketCommitLink",
     "Sprint",
     "SprintUserCapacity",
     "StoryPointsScheme",

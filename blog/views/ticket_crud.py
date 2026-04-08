@@ -10,7 +10,7 @@ from django.views.decorators.http import require_POST
 from django.views.generic import CreateView, DeleteView, DetailView, UpdateView
 
 from ..forms import RemainingLoadUpdateForm, TicketForm
-from ..models import Sprint, Ticket, TicketAttachment, TicketLink
+from ..models import Sprint, Ticket, TicketAttachment, TicketCommitLink, TicketLink
 from ..services.git_service import GitService
 from .permissions import can_edit_ticket, project_assignees, visible_projects
 from .queries import project_linkable_tickets, ticket_form_project_data
@@ -39,6 +39,7 @@ class TicketDetailView(LoginRequiredMixin, DetailView):
         ctx["blocked_by_tickets"] = self._get_blocked_by_tickets()
         ctx["blocks_tickets"] = self._get_blocks_tickets()
         ctx["related_tickets"] = self._get_related_tickets()
+        ctx["commit_links"] = self._get_commit_links()
         ctx["ticket_summary"] = {
             "attachment_count": self.object.attachments.count(),
             "link_count": len(ctx["blocked_by_tickets"]) + len(ctx["blocks_tickets"]) + len(ctx["related_tickets"]),
@@ -69,6 +70,14 @@ class TicketDetailView(LoginRequiredMixin, DetailView):
             .select_related("source_ticket", "target_ticket")
             .order_by("source_ticket__title", "target_ticket__title")
         ]
+
+    def _get_commit_links(self):
+        return (
+            TicketCommitLink.objects
+            .filter(ticket=self.object)
+            .select_related("git_commit__git_repository", "linked_by")
+            .order_by("-git_commit__commit_date")
+        )
 
 
 class TicketCreateView(LoginRequiredMixin, CreateView):

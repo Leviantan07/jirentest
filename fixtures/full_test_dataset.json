@@ -1,0 +1,3313 @@
+[
+{
+  "model": "auth.user",
+  "pk": 39,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$eqCnk7OScWKnxtWpYRXQwR$J8oi+6XT4K7kDgzqv4YmChLwZ3afaeAqGDdcgPOTEZU=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "jiren_admin",
+    "first_name": "Admin",
+    "last_name": "Jiren",
+    "email": "admin@jiren.dev",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2026-04-07T23:44:53.932Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 40,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$hHckCjSJVbc8IUy2nEOTjQ$HbfamacZfzmTRydTR2XY3cCRcEZ+M+oF1c6tX1Tn7Bw=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "alice_dev",
+    "first_name": "Alice",
+    "last_name": "Durand",
+    "email": "alice@jiren.dev",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-04-07T23:44:54.227Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 41,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$ATrb27DvOD15aDBx7wPcmV$iCdWYc8wtfam2zuRD3/p7UM4ItW0I8ZA3LUE6lxLZpw=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "bob_dev",
+    "first_name": "Bob",
+    "last_name": "Martin",
+    "email": "bob@jiren.dev",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-04-07T23:44:54.432Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 42,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$SFQv6xWoa8D0E8ntyOcU0i$1zCk+VL8SKbi0S5T5R0vVzFwQ3VD9vdRu7CfpCTC91c=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "charlie_dev",
+    "first_name": "Charlie",
+    "last_name": "Petit",
+    "email": "charlie@jiren.dev",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-04-07T23:44:54.626Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 43,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$6GjXaxVtXJrnAI2WSfQKKF$oFzgUOxzCk5gZ/UT1iQtKwJRrSxEel1+ifWhKEi3l6I=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "elena_design",
+    "first_name": "Elena",
+    "last_name": "Voss",
+    "email": "elena@jiren.dev",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-04-07T23:44:54.820Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 44,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$rwpHKOLF5oGOEQNNrVSyq7$1Q2F08yIWg59H0RwS04PtXCljZZUNvOBq3reZgLcMEE=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "sara_design",
+    "first_name": "Sara",
+    "last_name": "Blanc",
+    "email": "sara@jiren.dev",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-04-07T23:44:55.018Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 45,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$isAJ8GmJgO4BvtXsLnFkn1$8vYuS6sw25ifjqXz7AnLSZ0cUpcJcCR1xO7owHwNgPg=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "marcus_qa",
+    "first_name": "Marcus",
+    "last_name": "Dahl",
+    "email": "marcus@jiren.dev",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-04-07T23:44:55.217Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 46,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$3xPJaKha7Ll6Y7fcAH0InD$c/8Vj8ZaExNzZV6ToGKkpWbTkKoJmXEyrgizDShhBfQ=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "jordan_qa",
+    "first_name": "Jordan",
+    "last_name": "Cruz",
+    "email": "jordan@jiren.dev",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-04-07T23:44:55.414Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 47,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$qJZC4IkCCKJSjWmTBfaXOy$JlndzMRXkls77EZpOunTETteLQor5SGLVpJyNyRxewA=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "leo_product",
+    "first_name": "Leo",
+    "last_name": "Bernard",
+    "email": "leo@jiren.dev",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-04-07T23:44:55.614Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 48,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$LnS9JmUHKgsukMMBpz14Rv$CRTnaqAbb7h1Q5svDof14EkhII5zg6Xf6UExYSBR/VM=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "nadia_product",
+    "first_name": "Nadia",
+    "last_name": "Kowalski",
+    "email": "nadia@jiren.dev",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-04-07T23:44:55.807Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.profile",
+  "pk": 39,
+  "fields": {
+    "user": 39,
+    "image": "default.jpg",
+    "role": "admin"
+  }
+},
+{
+  "model": "users.profile",
+  "pk": 40,
+  "fields": {
+    "user": 40,
+    "image": "default.jpg",
+    "role": "member"
+  }
+},
+{
+  "model": "users.profile",
+  "pk": 41,
+  "fields": {
+    "user": 41,
+    "image": "default.jpg",
+    "role": "member"
+  }
+},
+{
+  "model": "users.profile",
+  "pk": 42,
+  "fields": {
+    "user": 42,
+    "image": "default.jpg",
+    "role": "member"
+  }
+},
+{
+  "model": "users.profile",
+  "pk": 43,
+  "fields": {
+    "user": 43,
+    "image": "default.jpg",
+    "role": "member"
+  }
+},
+{
+  "model": "users.profile",
+  "pk": 44,
+  "fields": {
+    "user": 44,
+    "image": "default.jpg",
+    "role": "member"
+  }
+},
+{
+  "model": "users.profile",
+  "pk": 45,
+  "fields": {
+    "user": 45,
+    "image": "default.jpg",
+    "role": "member"
+  }
+},
+{
+  "model": "users.profile",
+  "pk": 46,
+  "fields": {
+    "user": 46,
+    "image": "default.jpg",
+    "role": "member"
+  }
+},
+{
+  "model": "users.profile",
+  "pk": 47,
+  "fields": {
+    "user": 47,
+    "image": "default.jpg",
+    "role": "member"
+  }
+},
+{
+  "model": "users.profile",
+  "pk": 48,
+  "fields": {
+    "user": 48,
+    "image": "default.jpg",
+    "role": "member"
+  }
+},
+{
+  "model": "blog.project",
+  "pk": 13,
+  "fields": {
+    "code_prefix": "QIR",
+    "name": "Quantum Interface Redesign",
+    "description": "Full redesign of the flagship UI with glass-morphism and HTMX.",
+    "start_date": "2026-03-08",
+    "end_date": "2026-06-06",
+    "workload_unit": "STORY_POINTS",
+    "sprint_duration_days": 14,
+    "capacity_mode": "PER_USER",
+    "global_capacity": null,
+    "date_created": "2026-04-07T23:44:56.010Z",
+    "manager": 39
+  }
+},
+{
+  "model": "blog.project",
+  "pk": 14,
+  "fields": {
+    "code_prefix": "API2",
+    "name": "Backend API V2",
+    "description": "RESTful API v2 with DRF, JWT auth, and full test coverage.",
+    "start_date": "2026-03-23",
+    "end_date": "2026-06-21",
+    "workload_unit": "STORY_POINTS",
+    "sprint_duration_days": 14,
+    "capacity_mode": "GLOBAL",
+    "global_capacity": null,
+    "date_created": "2026-04-07T23:44:56.027Z",
+    "manager": 47
+  }
+},
+{
+  "model": "blog.project",
+  "pk": 15,
+  "fields": {
+    "code_prefix": "MOB",
+    "name": "Mobile App",
+    "description": "Cross-platform mobile application planning phase.",
+    "start_date": "2026-04-14",
+    "end_date": "2026-07-13",
+    "workload_unit": "MAN_HOURS",
+    "sprint_duration_days": 14,
+    "capacity_mode": "GLOBAL",
+    "global_capacity": null,
+    "date_created": "2026-04-07T23:44:56.034Z",
+    "manager": 39
+  }
+},
+{
+  "model": "blog.projectmember",
+  "pk": 75,
+  "fields": {
+    "project": 13,
+    "user": 39,
+    "role": "admin",
+    "joined_at": "2026-04-07T23:44:56.012Z"
+  }
+},
+{
+  "model": "blog.projectmember",
+  "pk": 76,
+  "fields": {
+    "project": 13,
+    "user": 40,
+    "role": "member",
+    "joined_at": "2026-04-07T23:44:56.019Z"
+  }
+},
+{
+  "model": "blog.projectmember",
+  "pk": 77,
+  "fields": {
+    "project": 13,
+    "user": 41,
+    "role": "member",
+    "joined_at": "2026-04-07T23:44:56.021Z"
+  }
+},
+{
+  "model": "blog.projectmember",
+  "pk": 78,
+  "fields": {
+    "project": 13,
+    "user": 42,
+    "role": "member",
+    "joined_at": "2026-04-07T23:44:56.021Z"
+  }
+},
+{
+  "model": "blog.projectmember",
+  "pk": 79,
+  "fields": {
+    "project": 13,
+    "user": 43,
+    "role": "member",
+    "joined_at": "2026-04-07T23:44:56.022Z"
+  }
+},
+{
+  "model": "blog.projectmember",
+  "pk": 80,
+  "fields": {
+    "project": 13,
+    "user": 44,
+    "role": "member",
+    "joined_at": "2026-04-07T23:44:56.023Z"
+  }
+},
+{
+  "model": "blog.projectmember",
+  "pk": 81,
+  "fields": {
+    "project": 13,
+    "user": 45,
+    "role": "member",
+    "joined_at": "2026-04-07T23:44:56.024Z"
+  }
+},
+{
+  "model": "blog.projectmember",
+  "pk": 82,
+  "fields": {
+    "project": 13,
+    "user": 46,
+    "role": "member",
+    "joined_at": "2026-04-07T23:44:56.025Z"
+  }
+},
+{
+  "model": "blog.projectmember",
+  "pk": 83,
+  "fields": {
+    "project": 13,
+    "user": 47,
+    "role": "member",
+    "joined_at": "2026-04-07T23:44:56.026Z"
+  }
+},
+{
+  "model": "blog.projectmember",
+  "pk": 84,
+  "fields": {
+    "project": 13,
+    "user": 48,
+    "role": "member",
+    "joined_at": "2026-04-07T23:44:56.027Z"
+  }
+},
+{
+  "model": "blog.projectmember",
+  "pk": 85,
+  "fields": {
+    "project": 14,
+    "user": 47,
+    "role": "admin",
+    "joined_at": "2026-04-07T23:44:56.029Z"
+  }
+},
+{
+  "model": "blog.projectmember",
+  "pk": 86,
+  "fields": {
+    "project": 14,
+    "user": 40,
+    "role": "member",
+    "joined_at": "2026-04-07T23:44:56.030Z"
+  }
+},
+{
+  "model": "blog.projectmember",
+  "pk": 87,
+  "fields": {
+    "project": 14,
+    "user": 41,
+    "role": "member",
+    "joined_at": "2026-04-07T23:44:56.031Z"
+  }
+},
+{
+  "model": "blog.projectmember",
+  "pk": 88,
+  "fields": {
+    "project": 14,
+    "user": 42,
+    "role": "member",
+    "joined_at": "2026-04-07T23:44:56.032Z"
+  }
+},
+{
+  "model": "blog.projectmember",
+  "pk": 89,
+  "fields": {
+    "project": 14,
+    "user": 43,
+    "role": "member",
+    "joined_at": "2026-04-07T23:44:56.032Z"
+  }
+},
+{
+  "model": "blog.projectmember",
+  "pk": 90,
+  "fields": {
+    "project": 14,
+    "user": 45,
+    "role": "member",
+    "joined_at": "2026-04-07T23:44:56.033Z"
+  }
+},
+{
+  "model": "blog.projectmember",
+  "pk": 91,
+  "fields": {
+    "project": 15,
+    "user": 39,
+    "role": "admin",
+    "joined_at": "2026-04-07T23:44:56.035Z"
+  }
+},
+{
+  "model": "blog.projectmember",
+  "pk": 92,
+  "fields": {
+    "project": 15,
+    "user": 43,
+    "role": "member",
+    "joined_at": "2026-04-07T23:44:56.036Z"
+  }
+},
+{
+  "model": "blog.projectmember",
+  "pk": 93,
+  "fields": {
+    "project": 15,
+    "user": 44,
+    "role": "member",
+    "joined_at": "2026-04-07T23:44:56.037Z"
+  }
+},
+{
+  "model": "blog.projectmember",
+  "pk": 94,
+  "fields": {
+    "project": 15,
+    "user": 42,
+    "role": "member",
+    "joined_at": "2026-04-07T23:44:56.038Z"
+  }
+},
+{
+  "model": "blog.projectmember",
+  "pk": 95,
+  "fields": {
+    "project": 15,
+    "user": 45,
+    "role": "member",
+    "joined_at": "2026-04-07T23:44:56.038Z"
+  }
+},
+{
+  "model": "blog.storypointsscheme",
+  "pk": 11,
+  "fields": {
+    "project": 13,
+    "scheme_type": "fibonacci"
+  }
+},
+{
+  "model": "blog.storypointsscheme",
+  "pk": 12,
+  "fields": {
+    "project": 14,
+    "scheme_type": "fibonacci"
+  }
+},
+{
+  "model": "blog.storypointsscheme",
+  "pk": 13,
+  "fields": {
+    "project": 15,
+    "scheme_type": "fibonacci"
+  }
+},
+{
+  "model": "blog.sprint",
+  "pk": 52,
+  "fields": {
+    "project": 13,
+    "name": "Sprint 1.0a",
+    "objective": "Completed iteration a for Quantum Interface Redesign",
+    "status": "CLOSED",
+    "capacity_mode": "PER_USER",
+    "capacity": null,
+    "ticket_template": "ticket_card",
+    "start_date": "2026-02-10",
+    "end_date": "2026-02-23",
+    "created_by": 39,
+    "activated_at": null,
+    "closed_at": "2026-02-24T23:44:56.041Z"
+  }
+},
+{
+  "model": "blog.sprint",
+  "pk": 53,
+  "fields": {
+    "project": 13,
+    "name": "Sprint 1.0b",
+    "objective": "Completed iteration b for Quantum Interface Redesign",
+    "status": "CLOSED",
+    "capacity_mode": "PER_USER",
+    "capacity": null,
+    "ticket_template": "ticket_card",
+    "start_date": "2026-02-24",
+    "end_date": "2026-03-09",
+    "created_by": 39,
+    "activated_at": null,
+    "closed_at": "2026-03-10T23:44:56.041Z"
+  }
+},
+{
+  "model": "blog.sprint",
+  "pk": 54,
+  "fields": {
+    "project": 13,
+    "name": "Sprint 1.0c",
+    "objective": "Completed iteration c for Quantum Interface Redesign",
+    "status": "CLOSED",
+    "capacity_mode": "PER_USER",
+    "capacity": null,
+    "ticket_template": "ticket_card",
+    "start_date": "2026-03-10",
+    "end_date": "2026-03-23",
+    "created_by": 39,
+    "activated_at": null,
+    "closed_at": "2026-03-24T23:44:56.041Z"
+  }
+},
+{
+  "model": "blog.sprint",
+  "pk": 55,
+  "fields": {
+    "project": 13,
+    "name": "Sprint 1.1",
+    "objective": "Deliver core features for Quantum Interface Redesign",
+    "status": "ACTIVE",
+    "capacity_mode": "PER_USER",
+    "capacity": null,
+    "ticket_template": "ticket_card",
+    "start_date": "2026-03-31",
+    "end_date": "2026-04-13",
+    "created_by": 39,
+    "activated_at": null,
+    "closed_at": null
+  }
+},
+{
+  "model": "blog.sprint",
+  "pk": 56,
+  "fields": {
+    "project": 13,
+    "name": "Sprint 1.2",
+    "objective": "Refinement, bug fixes, and polish.",
+    "status": "PLANNED",
+    "capacity_mode": "PER_USER",
+    "capacity": null,
+    "ticket_template": "ticket_card",
+    "start_date": "2026-04-14",
+    "end_date": "2026-04-27",
+    "created_by": 39,
+    "activated_at": null,
+    "closed_at": null
+  }
+},
+{
+  "model": "blog.sprint",
+  "pk": 57,
+  "fields": {
+    "project": 14,
+    "name": "Sprint 2.0a",
+    "objective": "Completed iteration a for Backend API V2",
+    "status": "CLOSED",
+    "capacity_mode": "GLOBAL",
+    "capacity": 40,
+    "ticket_template": "ticket_card",
+    "start_date": "2026-02-10",
+    "end_date": "2026-02-23",
+    "created_by": 39,
+    "activated_at": null,
+    "closed_at": "2026-02-24T23:44:56.041Z"
+  }
+},
+{
+  "model": "blog.sprint",
+  "pk": 58,
+  "fields": {
+    "project": 14,
+    "name": "Sprint 2.0b",
+    "objective": "Completed iteration b for Backend API V2",
+    "status": "CLOSED",
+    "capacity_mode": "GLOBAL",
+    "capacity": 40,
+    "ticket_template": "ticket_card",
+    "start_date": "2026-02-24",
+    "end_date": "2026-03-09",
+    "created_by": 39,
+    "activated_at": null,
+    "closed_at": "2026-03-10T23:44:56.041Z"
+  }
+},
+{
+  "model": "blog.sprint",
+  "pk": 59,
+  "fields": {
+    "project": 14,
+    "name": "Sprint 2.0c",
+    "objective": "Completed iteration c for Backend API V2",
+    "status": "CLOSED",
+    "capacity_mode": "GLOBAL",
+    "capacity": 40,
+    "ticket_template": "ticket_card",
+    "start_date": "2026-03-10",
+    "end_date": "2026-03-23",
+    "created_by": 39,
+    "activated_at": null,
+    "closed_at": "2026-03-24T23:44:56.041Z"
+  }
+},
+{
+  "model": "blog.sprint",
+  "pk": 60,
+  "fields": {
+    "project": 14,
+    "name": "Sprint 2.1",
+    "objective": "Deliver core features for Backend API V2",
+    "status": "ACTIVE",
+    "capacity_mode": "GLOBAL",
+    "capacity": 40,
+    "ticket_template": "ticket_card",
+    "start_date": "2026-03-31",
+    "end_date": "2026-04-13",
+    "created_by": 39,
+    "activated_at": null,
+    "closed_at": null
+  }
+},
+{
+  "model": "blog.sprint",
+  "pk": 61,
+  "fields": {
+    "project": 14,
+    "name": "Sprint 2.2",
+    "objective": "Refinement, bug fixes, and polish.",
+    "status": "PLANNED",
+    "capacity_mode": "GLOBAL",
+    "capacity": 40,
+    "ticket_template": "ticket_card",
+    "start_date": "2026-04-14",
+    "end_date": "2026-04-27",
+    "created_by": 39,
+    "activated_at": null,
+    "closed_at": null
+  }
+},
+{
+  "model": "blog.sprint",
+  "pk": 62,
+  "fields": {
+    "project": 15,
+    "name": "Sprint 3.0a",
+    "objective": "Completed iteration a for Mobile App",
+    "status": "CLOSED",
+    "capacity_mode": "GLOBAL",
+    "capacity": 40,
+    "ticket_template": "ticket_card",
+    "start_date": "2026-02-10",
+    "end_date": "2026-02-23",
+    "created_by": 39,
+    "activated_at": null,
+    "closed_at": "2026-02-24T23:44:56.041Z"
+  }
+},
+{
+  "model": "blog.sprint",
+  "pk": 63,
+  "fields": {
+    "project": 15,
+    "name": "Sprint 3.0b",
+    "objective": "Completed iteration b for Mobile App",
+    "status": "CLOSED",
+    "capacity_mode": "GLOBAL",
+    "capacity": 40,
+    "ticket_template": "ticket_card",
+    "start_date": "2026-02-24",
+    "end_date": "2026-03-09",
+    "created_by": 39,
+    "activated_at": null,
+    "closed_at": "2026-03-10T23:44:56.041Z"
+  }
+},
+{
+  "model": "blog.sprint",
+  "pk": 64,
+  "fields": {
+    "project": 15,
+    "name": "Sprint 3.0c",
+    "objective": "Completed iteration c for Mobile App",
+    "status": "CLOSED",
+    "capacity_mode": "GLOBAL",
+    "capacity": 40,
+    "ticket_template": "ticket_card",
+    "start_date": "2026-03-10",
+    "end_date": "2026-03-23",
+    "created_by": 39,
+    "activated_at": null,
+    "closed_at": "2026-03-24T23:44:56.041Z"
+  }
+},
+{
+  "model": "blog.sprint",
+  "pk": 65,
+  "fields": {
+    "project": 15,
+    "name": "Sprint 3.1",
+    "objective": "Deliver core features for Mobile App",
+    "status": "ACTIVE",
+    "capacity_mode": "GLOBAL",
+    "capacity": 40,
+    "ticket_template": "ticket_card",
+    "start_date": "2026-03-31",
+    "end_date": "2026-04-13",
+    "created_by": 39,
+    "activated_at": null,
+    "closed_at": null
+  }
+},
+{
+  "model": "blog.sprint",
+  "pk": 66,
+  "fields": {
+    "project": 15,
+    "name": "Sprint 3.2",
+    "objective": "Refinement, bug fixes, and polish.",
+    "status": "PLANNED",
+    "capacity_mode": "GLOBAL",
+    "capacity": 40,
+    "ticket_template": "ticket_card",
+    "start_date": "2026-04-14",
+    "end_date": "2026-04-27",
+    "created_by": 39,
+    "activated_at": null,
+    "closed_at": null
+  }
+},
+{
+  "model": "blog.sprintusercapacity",
+  "pk": 49,
+  "fields": {
+    "sprint": 55,
+    "user": 40,
+    "capacity": 12
+  }
+},
+{
+  "model": "blog.sprintusercapacity",
+  "pk": 50,
+  "fields": {
+    "sprint": 55,
+    "user": 41,
+    "capacity": 10
+  }
+},
+{
+  "model": "blog.sprintusercapacity",
+  "pk": 51,
+  "fields": {
+    "sprint": 55,
+    "user": 42,
+    "capacity": 8
+  }
+},
+{
+  "model": "blog.sprintusercapacity",
+  "pk": 52,
+  "fields": {
+    "sprint": 55,
+    "user": 43,
+    "capacity": 10
+  }
+},
+{
+  "model": "blog.sprintusercapacity",
+  "pk": 53,
+  "fields": {
+    "sprint": 52,
+    "user": 40,
+    "capacity": 12
+  }
+},
+{
+  "model": "blog.sprintusercapacity",
+  "pk": 54,
+  "fields": {
+    "sprint": 52,
+    "user": 41,
+    "capacity": 10
+  }
+},
+{
+  "model": "blog.sprintusercapacity",
+  "pk": 55,
+  "fields": {
+    "sprint": 52,
+    "user": 42,
+    "capacity": 8
+  }
+},
+{
+  "model": "blog.sprintusercapacity",
+  "pk": 56,
+  "fields": {
+    "sprint": 52,
+    "user": 43,
+    "capacity": 10
+  }
+},
+{
+  "model": "blog.sprintusercapacity",
+  "pk": 57,
+  "fields": {
+    "sprint": 53,
+    "user": 40,
+    "capacity": 12
+  }
+},
+{
+  "model": "blog.sprintusercapacity",
+  "pk": 58,
+  "fields": {
+    "sprint": 53,
+    "user": 41,
+    "capacity": 10
+  }
+},
+{
+  "model": "blog.sprintusercapacity",
+  "pk": 59,
+  "fields": {
+    "sprint": 53,
+    "user": 42,
+    "capacity": 8
+  }
+},
+{
+  "model": "blog.sprintusercapacity",
+  "pk": 60,
+  "fields": {
+    "sprint": 53,
+    "user": 43,
+    "capacity": 10
+  }
+},
+{
+  "model": "blog.sprintusercapacity",
+  "pk": 61,
+  "fields": {
+    "sprint": 54,
+    "user": 40,
+    "capacity": 12
+  }
+},
+{
+  "model": "blog.sprintusercapacity",
+  "pk": 62,
+  "fields": {
+    "sprint": 54,
+    "user": 41,
+    "capacity": 10
+  }
+},
+{
+  "model": "blog.sprintusercapacity",
+  "pk": 63,
+  "fields": {
+    "sprint": 54,
+    "user": 42,
+    "capacity": 8
+  }
+},
+{
+  "model": "blog.sprintusercapacity",
+  "pk": 64,
+  "fields": {
+    "sprint": 54,
+    "user": 43,
+    "capacity": 10
+  }
+},
+{
+  "model": "blog.tag",
+  "pk": 99,
+  "fields": {
+    "project": 13,
+    "name": "infrastructure",
+    "normalized_name": "infrastructure"
+  }
+},
+{
+  "model": "blog.tag",
+  "pk": 100,
+  "fields": {
+    "project": 13,
+    "name": "frontend",
+    "normalized_name": "frontend"
+  }
+},
+{
+  "model": "blog.tag",
+  "pk": 101,
+  "fields": {
+    "project": 13,
+    "name": "backend",
+    "normalized_name": "backend"
+  }
+},
+{
+  "model": "blog.tag",
+  "pk": 102,
+  "fields": {
+    "project": 13,
+    "name": "database",
+    "normalized_name": "database"
+  }
+},
+{
+  "model": "blog.tag",
+  "pk": 103,
+  "fields": {
+    "project": 13,
+    "name": "security",
+    "normalized_name": "security"
+  }
+},
+{
+  "model": "blog.tag",
+  "pk": 104,
+  "fields": {
+    "project": 13,
+    "name": "ui-ux",
+    "normalized_name": "ui-ux"
+  }
+},
+{
+  "model": "blog.tag",
+  "pk": 105,
+  "fields": {
+    "project": 13,
+    "name": "testing",
+    "normalized_name": "testing"
+  }
+},
+{
+  "model": "blog.tag",
+  "pk": 106,
+  "fields": {
+    "project": 13,
+    "name": "documentation",
+    "normalized_name": "documentation"
+  }
+},
+{
+  "model": "blog.tag",
+  "pk": 107,
+  "fields": {
+    "project": 14,
+    "name": "infrastructure",
+    "normalized_name": "infrastructure"
+  }
+},
+{
+  "model": "blog.tag",
+  "pk": 108,
+  "fields": {
+    "project": 14,
+    "name": "frontend",
+    "normalized_name": "frontend"
+  }
+},
+{
+  "model": "blog.tag",
+  "pk": 109,
+  "fields": {
+    "project": 14,
+    "name": "backend",
+    "normalized_name": "backend"
+  }
+},
+{
+  "model": "blog.tag",
+  "pk": 110,
+  "fields": {
+    "project": 14,
+    "name": "database",
+    "normalized_name": "database"
+  }
+},
+{
+  "model": "blog.tag",
+  "pk": 111,
+  "fields": {
+    "project": 14,
+    "name": "security",
+    "normalized_name": "security"
+  }
+},
+{
+  "model": "blog.tag",
+  "pk": 112,
+  "fields": {
+    "project": 14,
+    "name": "ui-ux",
+    "normalized_name": "ui-ux"
+  }
+},
+{
+  "model": "blog.tag",
+  "pk": 113,
+  "fields": {
+    "project": 14,
+    "name": "testing",
+    "normalized_name": "testing"
+  }
+},
+{
+  "model": "blog.tag",
+  "pk": 114,
+  "fields": {
+    "project": 14,
+    "name": "documentation",
+    "normalized_name": "documentation"
+  }
+},
+{
+  "model": "blog.tag",
+  "pk": 115,
+  "fields": {
+    "project": 15,
+    "name": "infrastructure",
+    "normalized_name": "infrastructure"
+  }
+},
+{
+  "model": "blog.tag",
+  "pk": 116,
+  "fields": {
+    "project": 15,
+    "name": "frontend",
+    "normalized_name": "frontend"
+  }
+},
+{
+  "model": "blog.tag",
+  "pk": 117,
+  "fields": {
+    "project": 15,
+    "name": "backend",
+    "normalized_name": "backend"
+  }
+},
+{
+  "model": "blog.tag",
+  "pk": 118,
+  "fields": {
+    "project": 15,
+    "name": "database",
+    "normalized_name": "database"
+  }
+},
+{
+  "model": "blog.tag",
+  "pk": 119,
+  "fields": {
+    "project": 15,
+    "name": "security",
+    "normalized_name": "security"
+  }
+},
+{
+  "model": "blog.tag",
+  "pk": 120,
+  "fields": {
+    "project": 15,
+    "name": "ui-ux",
+    "normalized_name": "ui-ux"
+  }
+},
+{
+  "model": "blog.tag",
+  "pk": 121,
+  "fields": {
+    "project": 15,
+    "name": "testing",
+    "normalized_name": "testing"
+  }
+},
+{
+  "model": "blog.tag",
+  "pk": 122,
+  "fields": {
+    "project": 15,
+    "name": "documentation",
+    "normalized_name": "documentation"
+  }
+},
+{
+  "model": "blog.ticket",
+  "pk": 244,
+  "fields": {
+    "title": "UI Design System",
+    "description": "Establish component library",
+    "date_posted": "2026-04-07T23:44:56.102Z",
+    "project": 13,
+    "sprint": 55,
+    "author": 39,
+    "assignee": null,
+    "issue_type": "EPIC",
+    "epic": null,
+    "status": "IN_PROGRESS",
+    "priority": "HIGH",
+    "story_points": 0,
+    "backlog_order": 1,
+    "initial_load": 0,
+    "remaining_load": 0,
+    "color": "#7C3AED",
+    "tags": [
+      100,
+      104
+    ]
+  }
+},
+{
+  "model": "blog.ticket",
+  "pk": 245,
+  "fields": {
+    "title": "Infrastructure Modernisation",
+    "description": "Docker + CI/CD pipeline",
+    "date_posted": "2026-04-07T23:44:56.112Z",
+    "project": 13,
+    "sprint": null,
+    "author": 39,
+    "assignee": null,
+    "issue_type": "EPIC",
+    "epic": null,
+    "status": "TODO",
+    "priority": "MEDIUM",
+    "story_points": 0,
+    "backlog_order": 2,
+    "initial_load": 0,
+    "remaining_load": 0,
+    "color": "#059669",
+    "tags": [
+      101,
+      99
+    ]
+  }
+},
+{
+  "model": "blog.ticket",
+  "pk": 246,
+  "fields": {
+    "title": "Design token CSS variables",
+    "description": "Map all tokens in main.css",
+    "date_posted": "2026-04-07T23:44:56.113Z",
+    "project": 13,
+    "sprint": 55,
+    "author": 43,
+    "assignee": 43,
+    "issue_type": "STORY",
+    "epic": 244,
+    "status": "DONE",
+    "priority": "HIGH",
+    "story_points": 5,
+    "backlog_order": 3,
+    "initial_load": 5,
+    "remaining_load": 5,
+    "color": null,
+    "tags": [
+      100,
+      104
+    ]
+  }
+},
+{
+  "model": "blog.ticket",
+  "pk": 247,
+  "fields": {
+    "title": "Glass-morphism card component",
+    "description": "Implement backdrop-blur card",
+    "date_posted": "2026-04-07T23:44:56.115Z",
+    "project": 13,
+    "sprint": 55,
+    "author": 43,
+    "assignee": 44,
+    "issue_type": "STORY",
+    "epic": 244,
+    "status": "IN_PROGRESS",
+    "priority": "HIGH",
+    "story_points": 8,
+    "backlog_order": 4,
+    "initial_load": 8,
+    "remaining_load": 8,
+    "color": null,
+    "tags": [
+      100,
+      104
+    ]
+  }
+},
+{
+  "model": "blog.ticket",
+  "pk": 248,
+  "fields": {
+    "title": "Dark/Light theme toggle",
+    "description": "Persist preference in localStorage",
+    "date_posted": "2026-04-07T23:44:56.117Z",
+    "project": 13,
+    "sprint": 55,
+    "author": 40,
+    "assignee": 40,
+    "issue_type": "STORY",
+    "epic": 244,
+    "status": "IN_PROGRESS",
+    "priority": "MEDIUM",
+    "story_points": 3,
+    "backlog_order": 5,
+    "initial_load": 3,
+    "remaining_load": 3,
+    "color": null,
+    "tags": [
+      100
+    ]
+  }
+},
+{
+  "model": "blog.ticket",
+  "pk": 249,
+  "fields": {
+    "title": "HTMX live ticket search",
+    "description": "Real-time search without full reload",
+    "date_posted": "2026-04-07T23:44:56.118Z",
+    "project": 13,
+    "sprint": 55,
+    "author": 41,
+    "assignee": 41,
+    "issue_type": "STORY",
+    "epic": null,
+    "status": "TODO",
+    "priority": "MEDIUM",
+    "story_points": 8,
+    "backlog_order": 6,
+    "initial_load": 8,
+    "remaining_load": 8,
+    "color": null,
+    "tags": [
+      101,
+      100
+    ]
+  }
+},
+{
+  "model": "blog.ticket",
+  "pk": 250,
+  "fields": {
+    "title": "Accessibility audit",
+    "description": "WCAG 2.1 AA compliance check",
+    "date_posted": "2026-04-07T23:44:56.119Z",
+    "project": 13,
+    "sprint": null,
+    "author": 45,
+    "assignee": null,
+    "issue_type": "STORY",
+    "epic": null,
+    "status": "TODO",
+    "priority": "LOW",
+    "story_points": 5,
+    "backlog_order": 7,
+    "initial_load": 5,
+    "remaining_load": 5,
+    "color": null,
+    "tags": [
+      106,
+      105
+    ]
+  }
+},
+{
+  "model": "blog.ticket",
+  "pk": 251,
+  "fields": {
+    "title": "Sidebar collapse flicker on Firefox",
+    "description": "Sidebar animation jank on resize",
+    "date_posted": "2026-04-07T23:44:56.121Z",
+    "project": 13,
+    "sprint": 55,
+    "author": 40,
+    "assignee": 40,
+    "issue_type": "BUG",
+    "epic": null,
+    "status": "IN_PROGRESS",
+    "priority": "HIGH",
+    "story_points": 0,
+    "backlog_order": 8,
+    "initial_load": 0,
+    "remaining_load": 0,
+    "color": null,
+    "tags": [
+      100
+    ]
+  }
+},
+{
+  "model": "blog.ticket",
+  "pk": 252,
+  "fields": {
+    "title": "Dark mode badge colour broken",
+    "description": "Badge uses hardcoded #fff in dark mode",
+    "date_posted": "2026-04-07T23:44:56.122Z",
+    "project": 13,
+    "sprint": 55,
+    "author": 44,
+    "assignee": 44,
+    "issue_type": "BUG",
+    "epic": null,
+    "status": "TODO",
+    "priority": "MEDIUM",
+    "story_points": 0,
+    "backlog_order": 9,
+    "initial_load": 0,
+    "remaining_load": 0,
+    "color": null,
+    "tags": [
+      100,
+      104
+    ]
+  }
+},
+{
+  "model": "blog.ticket",
+  "pk": 253,
+  "fields": {
+    "title": "Profile image upload fails",
+    "description": "JPEG > 2 MB causes 500 error",
+    "date_posted": "2026-04-07T23:44:56.124Z",
+    "project": 13,
+    "sprint": null,
+    "author": 45,
+    "assignee": null,
+    "issue_type": "BUG",
+    "epic": null,
+    "status": "TODO",
+    "priority": "HIGH",
+    "story_points": 0,
+    "backlog_order": 10,
+    "initial_load": 0,
+    "remaining_load": 0,
+    "color": null,
+    "tags": [
+      101,
+      103
+    ]
+  }
+},
+{
+  "model": "blog.ticket",
+  "pk": 254,
+  "fields": {
+    "title": "Write CHANGELOG for v2",
+    "description": "Document all breaking changes",
+    "date_posted": "2026-04-07T23:44:56.125Z",
+    "project": 13,
+    "sprint": 55,
+    "author": 39,
+    "assignee": 40,
+    "issue_type": "TASK",
+    "epic": null,
+    "status": "IN_PROGRESS",
+    "priority": "LOW",
+    "story_points": 0,
+    "backlog_order": 11,
+    "initial_load": 3,
+    "remaining_load": 3,
+    "color": null,
+    "tags": [
+      106
+    ]
+  }
+},
+{
+  "model": "blog.ticket",
+  "pk": 255,
+  "fields": {
+    "title": "Docker Compose local dev setup",
+    "description": "Add docker-compose.yml with hot-reload",
+    "date_posted": "2026-04-07T23:44:56.126Z",
+    "project": 13,
+    "sprint": 55,
+    "author": 41,
+    "assignee": 41,
+    "issue_type": "TASK",
+    "epic": 245,
+    "status": "TODO",
+    "priority": "MEDIUM",
+    "story_points": 0,
+    "backlog_order": 12,
+    "initial_load": 8,
+    "remaining_load": 8,
+    "color": null,
+    "tags": [
+      99
+    ]
+  }
+},
+{
+  "model": "blog.ticket",
+  "pk": 256,
+  "fields": {
+    "title": "Add GitHub Actions CI pipeline",
+    "description": "Lint + test on every PR",
+    "date_posted": "2026-04-07T23:44:56.128Z",
+    "project": 13,
+    "sprint": null,
+    "author": 39,
+    "assignee": null,
+    "issue_type": "TASK",
+    "epic": 245,
+    "status": "TODO",
+    "priority": "HIGH",
+    "story_points": 0,
+    "backlog_order": 13,
+    "initial_load": 13,
+    "remaining_load": 13,
+    "color": null,
+    "tags": [
+      99,
+      105
+    ]
+  }
+},
+{
+  "model": "blog.ticket",
+  "pk": 257,
+  "fields": {
+    "title": "JWT Authentication System",
+    "description": "Access + refresh token flow",
+    "date_posted": "2026-04-07T23:44:56.129Z",
+    "project": 14,
+    "sprint": 60,
+    "author": 40,
+    "assignee": null,
+    "issue_type": "EPIC",
+    "epic": null,
+    "status": "IN_PROGRESS",
+    "priority": "HIGH",
+    "story_points": 0,
+    "backlog_order": 1,
+    "initial_load": 0,
+    "remaining_load": 0,
+    "color": "#DC2626",
+    "tags": [
+      109,
+      111
+    ]
+  }
+},
+{
+  "model": "blog.ticket",
+  "pk": 258,
+  "fields": {
+    "title": "Token refresh endpoint",
+    "description": "POST /api/auth/refresh/",
+    "date_posted": "2026-04-07T23:44:56.130Z",
+    "project": 14,
+    "sprint": 60,
+    "author": 40,
+    "assignee": 40,
+    "issue_type": "STORY",
+    "epic": 257,
+    "status": "DONE",
+    "priority": "HIGH",
+    "story_points": 5,
+    "backlog_order": 2,
+    "initial_load": 5,
+    "remaining_load": 5,
+    "color": null,
+    "tags": [
+      109
+    ]
+  }
+},
+{
+  "model": "blog.ticket",
+  "pk": 259,
+  "fields": {
+    "title": "Permission middleware",
+    "description": "Role-based access on all routes",
+    "date_posted": "2026-04-07T23:44:56.132Z",
+    "project": 14,
+    "sprint": 60,
+    "author": 41,
+    "assignee": 41,
+    "issue_type": "STORY",
+    "epic": 257,
+    "status": "IN_PROGRESS",
+    "priority": "HIGH",
+    "story_points": 8,
+    "backlog_order": 3,
+    "initial_load": 8,
+    "remaining_load": 8,
+    "color": null,
+    "tags": [
+      109,
+      111
+    ]
+  }
+},
+{
+  "model": "blog.ticket",
+  "pk": 260,
+  "fields": {
+    "title": "OpenAPI schema generation",
+    "description": "drf-spectacular integration",
+    "date_posted": "2026-04-07T23:44:56.133Z",
+    "project": 14,
+    "sprint": 60,
+    "author": 42,
+    "assignee": 42,
+    "issue_type": "STORY",
+    "epic": null,
+    "status": "TODO",
+    "priority": "MEDIUM",
+    "story_points": 3,
+    "backlog_order": 4,
+    "initial_load": 3,
+    "remaining_load": 3,
+    "color": null,
+    "tags": [
+      109,
+      114
+    ]
+  }
+},
+{
+  "model": "blog.ticket",
+  "pk": 261,
+  "fields": {
+    "title": "Rate limiting on auth endpoints",
+    "description": "django-ratelimit on /login /refresh",
+    "date_posted": "2026-04-07T23:44:56.134Z",
+    "project": 14,
+    "sprint": 60,
+    "author": 40,
+    "assignee": 40,
+    "issue_type": "STORY",
+    "epic": null,
+    "status": "TODO",
+    "priority": "HIGH",
+    "story_points": 5,
+    "backlog_order": 5,
+    "initial_load": 5,
+    "remaining_load": 5,
+    "color": null,
+    "tags": [
+      109,
+      111
+    ]
+  }
+},
+{
+  "model": "blog.ticket",
+  "pk": 262,
+  "fields": {
+    "title": "Pagination helper mixin",
+    "description": "Cursor-based pagination for all list views",
+    "date_posted": "2026-04-07T23:44:56.136Z",
+    "project": 14,
+    "sprint": null,
+    "author": 41,
+    "assignee": null,
+    "issue_type": "STORY",
+    "epic": null,
+    "status": "TODO",
+    "priority": "MEDIUM",
+    "story_points": 5,
+    "backlog_order": 6,
+    "initial_load": 5,
+    "remaining_load": 5,
+    "color": null,
+    "tags": [
+      109
+    ]
+  }
+},
+{
+  "model": "blog.ticket",
+  "pk": 263,
+  "fields": {
+    "title": "Token expiry not enforced on logout",
+    "description": "Blacklist not checked on logout",
+    "date_posted": "2026-04-07T23:44:56.137Z",
+    "project": 14,
+    "sprint": 60,
+    "author": 45,
+    "assignee": 45,
+    "issue_type": "BUG",
+    "epic": 257,
+    "status": "IN_PROGRESS",
+    "priority": "HIGH",
+    "story_points": 0,
+    "backlog_order": 7,
+    "initial_load": 0,
+    "remaining_load": 0,
+    "color": null,
+    "tags": [
+      109,
+      111
+    ]
+  }
+},
+{
+  "model": "blog.ticket",
+  "pk": 264,
+  "fields": {
+    "title": "500 on nullable profile field",
+    "description": "Profile.bio raises AttributeError",
+    "date_posted": "2026-04-07T23:44:56.139Z",
+    "project": 14,
+    "sprint": 60,
+    "author": 42,
+    "assignee": null,
+    "issue_type": "BUG",
+    "epic": null,
+    "status": "TODO",
+    "priority": "MEDIUM",
+    "story_points": 0,
+    "backlog_order": 8,
+    "initial_load": 0,
+    "remaining_load": 0,
+    "color": null,
+    "tags": [
+      109
+    ]
+  }
+},
+{
+  "model": "blog.ticket",
+  "pk": 265,
+  "fields": {
+    "title": "N+1 query on ticket list endpoint",
+    "description": "select_related missing on assignee",
+    "date_posted": "2026-04-07T23:44:56.140Z",
+    "project": 14,
+    "sprint": null,
+    "author": 40,
+    "assignee": null,
+    "issue_type": "BUG",
+    "epic": null,
+    "status": "TODO",
+    "priority": "HIGH",
+    "story_points": 0,
+    "backlog_order": 9,
+    "initial_load": 0,
+    "remaining_load": 0,
+    "color": null,
+    "tags": [
+      109,
+      110
+    ]
+  }
+},
+{
+  "model": "blog.ticket",
+  "pk": 266,
+  "fields": {
+    "title": "Write DRF test suite",
+    "description": "Cover all ViewSets with pytest-django",
+    "date_posted": "2026-04-07T23:44:56.142Z",
+    "project": 14,
+    "sprint": 60,
+    "author": 45,
+    "assignee": 45,
+    "issue_type": "TASK",
+    "epic": null,
+    "status": "IN_PROGRESS",
+    "priority": "HIGH",
+    "story_points": 0,
+    "backlog_order": 10,
+    "initial_load": 13,
+    "remaining_load": 13,
+    "color": null,
+    "tags": [
+      113
+    ]
+  }
+},
+{
+  "model": "blog.ticket",
+  "pk": 267,
+  "fields": {
+    "title": "Migrate to PostgreSQL locally",
+    "description": "Replace SQLite in dev docker-compose",
+    "date_posted": "2026-04-07T23:44:56.143Z",
+    "project": 14,
+    "sprint": null,
+    "author": 41,
+    "assignee": null,
+    "issue_type": "TASK",
+    "epic": null,
+    "status": "TODO",
+    "priority": "MEDIUM",
+    "story_points": 0,
+    "backlog_order": 11,
+    "initial_load": 5,
+    "remaining_load": 5,
+    "color": null,
+    "tags": [
+      110,
+      107
+    ]
+  }
+},
+{
+  "model": "blog.ticket",
+  "pk": 268,
+  "fields": {
+    "title": "Add coverage badge to README",
+    "description": "codecov.io integration",
+    "date_posted": "2026-04-07T23:44:56.144Z",
+    "project": 14,
+    "sprint": null,
+    "author": 42,
+    "assignee": null,
+    "issue_type": "TASK",
+    "epic": null,
+    "status": "TODO",
+    "priority": "LOW",
+    "story_points": 0,
+    "backlog_order": 12,
+    "initial_load": 2,
+    "remaining_load": 2,
+    "color": null,
+    "tags": [
+      114,
+      113
+    ]
+  }
+},
+{
+  "model": "blog.ticket",
+  "pk": 269,
+  "fields": {
+    "title": "Mobile UX Foundation",
+    "description": "Core screens and navigation structure",
+    "date_posted": "2026-04-07T23:44:56.146Z",
+    "project": 15,
+    "sprint": 65,
+    "author": 43,
+    "assignee": null,
+    "issue_type": "EPIC",
+    "epic": null,
+    "status": "IN_PROGRESS",
+    "priority": "HIGH",
+    "story_points": 0,
+    "backlog_order": 1,
+    "initial_load": 0,
+    "remaining_load": 0,
+    "color": "#0891B2",
+    "tags": [
+      116,
+      120
+    ]
+  }
+},
+{
+  "model": "blog.ticket",
+  "pk": 270,
+  "fields": {
+    "title": "Onboarding flow screens",
+    "description": "4-step onboarding with skip logic",
+    "date_posted": "2026-04-07T23:44:56.147Z",
+    "project": 15,
+    "sprint": 65,
+    "author": 43,
+    "assignee": 43,
+    "issue_type": "STORY",
+    "epic": 269,
+    "status": "TODO",
+    "priority": "HIGH",
+    "story_points": 8,
+    "backlog_order": 2,
+    "initial_load": 8,
+    "remaining_load": 8,
+    "color": null,
+    "tags": [
+      120
+    ]
+  }
+},
+{
+  "model": "blog.ticket",
+  "pk": 271,
+  "fields": {
+    "title": "Bottom navigation bar",
+    "description": "Tab bar with active state indicators",
+    "date_posted": "2026-04-07T23:44:56.148Z",
+    "project": 15,
+    "sprint": 65,
+    "author": 44,
+    "assignee": 44,
+    "issue_type": "STORY",
+    "epic": 269,
+    "status": "TODO",
+    "priority": "MEDIUM",
+    "story_points": 5,
+    "backlog_order": 3,
+    "initial_load": 5,
+    "remaining_load": 5,
+    "color": null,
+    "tags": [
+      116,
+      120
+    ]
+  }
+},
+{
+  "model": "blog.ticket",
+  "pk": 272,
+  "fields": {
+    "title": "Push notification service",
+    "description": "Firebase FCM integration plan",
+    "date_posted": "2026-04-07T23:44:56.150Z",
+    "project": 15,
+    "sprint": null,
+    "author": 42,
+    "assignee": null,
+    "issue_type": "STORY",
+    "epic": null,
+    "status": "TODO",
+    "priority": "MEDIUM",
+    "story_points": 13,
+    "backlog_order": 4,
+    "initial_load": 13,
+    "remaining_load": 13,
+    "color": null,
+    "tags": [
+      117,
+      115
+    ]
+  }
+},
+{
+  "model": "blog.ticket",
+  "pk": 273,
+  "fields": {
+    "title": "Offline sync strategy",
+    "description": "Define conflict resolution approach",
+    "date_posted": "2026-04-07T23:44:56.151Z",
+    "project": 15,
+    "sprint": null,
+    "author": 43,
+    "assignee": null,
+    "issue_type": "STORY",
+    "epic": null,
+    "status": "TODO",
+    "priority": "LOW",
+    "story_points": 8,
+    "backlog_order": 5,
+    "initial_load": 8,
+    "remaining_load": 8,
+    "color": null,
+    "tags": [
+      117,
+      122
+    ]
+  }
+},
+{
+  "model": "blog.ticket",
+  "pk": 274,
+  "fields": {
+    "title": "Layout breaks on small screens < 320px",
+    "description": "Flex overflow on tiny devices",
+    "date_posted": "2026-04-07T23:44:56.154Z",
+    "project": 15,
+    "sprint": 65,
+    "author": 44,
+    "assignee": null,
+    "issue_type": "BUG",
+    "epic": null,
+    "status": "TODO",
+    "priority": "HIGH",
+    "story_points": 0,
+    "backlog_order": 6,
+    "initial_load": 0,
+    "remaining_load": 0,
+    "color": null,
+    "tags": [
+      116,
+      120
+    ]
+  }
+},
+{
+  "model": "blog.ticket",
+  "pk": 275,
+  "fields": {
+    "title": "Write mobile design spec",
+    "description": "Figma handoff doc for all screens",
+    "date_posted": "2026-04-07T23:44:56.155Z",
+    "project": 15,
+    "sprint": 65,
+    "author": 43,
+    "assignee": 43,
+    "issue_type": "TASK",
+    "epic": null,
+    "status": "IN_PROGRESS",
+    "priority": "MEDIUM",
+    "story_points": 0,
+    "backlog_order": 7,
+    "initial_load": 8,
+    "remaining_load": 8,
+    "color": null,
+    "tags": [
+      122,
+      120
+    ]
+  }
+},
+{
+  "model": "blog.ticket",
+  "pk": 276,
+  "fields": {
+    "title": "Research React Native vs Flutter",
+    "description": "Technical feasibility report",
+    "date_posted": "2026-04-07T23:44:56.156Z",
+    "project": 15,
+    "sprint": null,
+    "author": 42,
+    "assignee": null,
+    "issue_type": "TASK",
+    "epic": null,
+    "status": "TODO",
+    "priority": "HIGH",
+    "story_points": 0,
+    "backlog_order": 8,
+    "initial_load": 5,
+    "remaining_load": 5,
+    "color": null,
+    "tags": [
+      122
+    ]
+  }
+},
+{
+  "model": "blog.ticket",
+  "pk": 277,
+  "fields": {
+    "title": "Setup project scaffolding (Sprint 1.0a)",
+    "description": "Completed in Sprint 1.0a",
+    "date_posted": "2026-04-07T23:44:56.159Z",
+    "project": 13,
+    "sprint": 52,
+    "author": 39,
+    "assignee": 40,
+    "issue_type": "STORY",
+    "epic": null,
+    "status": "DONE",
+    "priority": "MEDIUM",
+    "story_points": 5,
+    "backlog_order": 1,
+    "initial_load": 5,
+    "remaining_load": 5,
+    "color": null,
+    "tags": []
+  }
+},
+{
+  "model": "blog.ticket",
+  "pk": 278,
+  "fields": {
+    "title": "Implement user authentication flow (Sprint 1.0a)",
+    "description": "Completed in Sprint 1.0a",
+    "date_posted": "2026-04-07T23:44:56.159Z",
+    "project": 13,
+    "sprint": 52,
+    "author": 39,
+    "assignee": 41,
+    "issue_type": "STORY",
+    "epic": null,
+    "status": "DONE",
+    "priority": "MEDIUM",
+    "story_points": 8,
+    "backlog_order": 2,
+    "initial_load": 8,
+    "remaining_load": 8,
+    "color": null,
+    "tags": []
+  }
+},
+{
+  "model": "blog.ticket",
+  "pk": 279,
+  "fields": {
+    "title": "Build dashboard layout (Sprint 1.0a)",
+    "description": "Completed in Sprint 1.0a",
+    "date_posted": "2026-04-07T23:44:56.160Z",
+    "project": 13,
+    "sprint": 52,
+    "author": 39,
+    "assignee": 42,
+    "issue_type": "STORY",
+    "epic": null,
+    "status": "DONE",
+    "priority": "MEDIUM",
+    "story_points": 3,
+    "backlog_order": 3,
+    "initial_load": 3,
+    "remaining_load": 3,
+    "color": null,
+    "tags": []
+  }
+},
+{
+  "model": "blog.ticket",
+  "pk": 280,
+  "fields": {
+    "title": "Add filtering and search (Sprint 1.0a)",
+    "description": "Carried over from Sprint 1.0a",
+    "date_posted": "2026-04-07T23:44:56.160Z",
+    "project": 13,
+    "sprint": 52,
+    "author": 39,
+    "assignee": 43,
+    "issue_type": "STORY",
+    "epic": null,
+    "status": "IN_PROGRESS",
+    "priority": "HIGH",
+    "story_points": 5,
+    "backlog_order": 4,
+    "initial_load": 5,
+    "remaining_load": 5,
+    "color": null,
+    "tags": []
+  }
+},
+{
+  "model": "blog.ticket",
+  "pk": 281,
+  "fields": {
+    "title": "Create data export feature (Sprint 1.0b)",
+    "description": "Completed in Sprint 1.0b",
+    "date_posted": "2026-04-07T23:44:56.160Z",
+    "project": 13,
+    "sprint": 53,
+    "author": 39,
+    "assignee": 40,
+    "issue_type": "STORY",
+    "epic": null,
+    "status": "DONE",
+    "priority": "MEDIUM",
+    "story_points": 5,
+    "backlog_order": 1,
+    "initial_load": 5,
+    "remaining_load": 5,
+    "color": null,
+    "tags": []
+  }
+},
+{
+  "model": "blog.ticket",
+  "pk": 282,
+  "fields": {
+    "title": "Implement notification system (Sprint 1.0b)",
+    "description": "Completed in Sprint 1.0b",
+    "date_posted": "2026-04-07T23:44:56.161Z",
+    "project": 13,
+    "sprint": 53,
+    "author": 39,
+    "assignee": 41,
+    "issue_type": "STORY",
+    "epic": null,
+    "status": "DONE",
+    "priority": "MEDIUM",
+    "story_points": 8,
+    "backlog_order": 2,
+    "initial_load": 8,
+    "remaining_load": 8,
+    "color": null,
+    "tags": []
+  }
+},
+{
+  "model": "blog.ticket",
+  "pk": 283,
+  "fields": {
+    "title": "Build settings page (Sprint 1.0b)",
+    "description": "Completed in Sprint 1.0b",
+    "date_posted": "2026-04-07T23:44:56.161Z",
+    "project": 13,
+    "sprint": 53,
+    "author": 39,
+    "assignee": 42,
+    "issue_type": "STORY",
+    "epic": null,
+    "status": "DONE",
+    "priority": "MEDIUM",
+    "story_points": 5,
+    "backlog_order": 3,
+    "initial_load": 5,
+    "remaining_load": 5,
+    "color": null,
+    "tags": []
+  }
+},
+{
+  "model": "blog.ticket",
+  "pk": 284,
+  "fields": {
+    "title": "Add role-based permissions (Sprint 1.0b)",
+    "description": "Completed in Sprint 1.0b",
+    "date_posted": "2026-04-07T23:44:56.161Z",
+    "project": 13,
+    "sprint": 53,
+    "author": 39,
+    "assignee": 43,
+    "issue_type": "STORY",
+    "epic": null,
+    "status": "DONE",
+    "priority": "MEDIUM",
+    "story_points": 3,
+    "backlog_order": 4,
+    "initial_load": 3,
+    "remaining_load": 3,
+    "color": null,
+    "tags": []
+  }
+},
+{
+  "model": "blog.ticket",
+  "pk": 285,
+  "fields": {
+    "title": "Create activity log module (Sprint 1.0b)",
+    "description": "Carried over from Sprint 1.0b",
+    "date_posted": "2026-04-07T23:44:56.162Z",
+    "project": 13,
+    "sprint": 53,
+    "author": 39,
+    "assignee": 44,
+    "issue_type": "STORY",
+    "epic": null,
+    "status": "IN_PROGRESS",
+    "priority": "HIGH",
+    "story_points": 8,
+    "backlog_order": 5,
+    "initial_load": 8,
+    "remaining_load": 8,
+    "color": null,
+    "tags": []
+  }
+},
+{
+  "model": "blog.ticket",
+  "pk": 286,
+  "fields": {
+    "title": "Implement caching layer (Sprint 1.0c)",
+    "description": "Completed in Sprint 1.0c",
+    "date_posted": "2026-04-07T23:44:56.162Z",
+    "project": 13,
+    "sprint": 54,
+    "author": 39,
+    "assignee": 40,
+    "issue_type": "STORY",
+    "epic": null,
+    "status": "DONE",
+    "priority": "MEDIUM",
+    "story_points": 8,
+    "backlog_order": 1,
+    "initial_load": 8,
+    "remaining_load": 8,
+    "color": null,
+    "tags": []
+  }
+},
+{
+  "model": "blog.ticket",
+  "pk": 287,
+  "fields": {
+    "title": "Build analytics dashboard (Sprint 1.0c)",
+    "description": "Completed in Sprint 1.0c",
+    "date_posted": "2026-04-07T23:44:56.163Z",
+    "project": 13,
+    "sprint": 54,
+    "author": 39,
+    "assignee": 41,
+    "issue_type": "STORY",
+    "epic": null,
+    "status": "DONE",
+    "priority": "MEDIUM",
+    "story_points": 5,
+    "backlog_order": 2,
+    "initial_load": 5,
+    "remaining_load": 5,
+    "color": null,
+    "tags": []
+  }
+},
+{
+  "model": "blog.ticket",
+  "pk": 288,
+  "fields": {
+    "title": "Add email integration (Sprint 1.0c)",
+    "description": "Completed in Sprint 1.0c",
+    "date_posted": "2026-04-07T23:44:56.163Z",
+    "project": 13,
+    "sprint": 54,
+    "author": 39,
+    "assignee": 42,
+    "issue_type": "STORY",
+    "epic": null,
+    "status": "DONE",
+    "priority": "MEDIUM",
+    "story_points": 3,
+    "backlog_order": 3,
+    "initial_load": 3,
+    "remaining_load": 3,
+    "color": null,
+    "tags": []
+  }
+},
+{
+  "model": "blog.ticket",
+  "pk": 289,
+  "fields": {
+    "title": "Create batch processing pipeline (Sprint 1.0c)",
+    "description": "Completed in Sprint 1.0c",
+    "date_posted": "2026-04-07T23:44:56.163Z",
+    "project": 13,
+    "sprint": 54,
+    "author": 39,
+    "assignee": 43,
+    "issue_type": "STORY",
+    "epic": null,
+    "status": "DONE",
+    "priority": "MEDIUM",
+    "story_points": 5,
+    "backlog_order": 4,
+    "initial_load": 5,
+    "remaining_load": 5,
+    "color": null,
+    "tags": []
+  }
+},
+{
+  "model": "blog.ticket",
+  "pk": 290,
+  "fields": {
+    "title": "Implement websocket updates (Sprint 1.0c)",
+    "description": "Completed in Sprint 1.0c",
+    "date_posted": "2026-04-07T23:44:56.164Z",
+    "project": 13,
+    "sprint": 54,
+    "author": 39,
+    "assignee": 44,
+    "issue_type": "STORY",
+    "epic": null,
+    "status": "DONE",
+    "priority": "MEDIUM",
+    "story_points": 8,
+    "backlog_order": 5,
+    "initial_load": 8,
+    "remaining_load": 8,
+    "color": null,
+    "tags": []
+  }
+},
+{
+  "model": "blog.ticket",
+  "pk": 291,
+  "fields": {
+    "title": "Build reporting module (Sprint 1.0c)",
+    "description": "Carried over from Sprint 1.0c",
+    "date_posted": "2026-04-07T23:44:56.164Z",
+    "project": 13,
+    "sprint": 54,
+    "author": 39,
+    "assignee": 45,
+    "issue_type": "STORY",
+    "epic": null,
+    "status": "IN_PROGRESS",
+    "priority": "HIGH",
+    "story_points": 3,
+    "backlog_order": 6,
+    "initial_load": 3,
+    "remaining_load": 3,
+    "color": null,
+    "tags": []
+  }
+},
+{
+  "model": "blog.ticket",
+  "pk": 292,
+  "fields": {
+    "title": "Add audit trail (Sprint 2.0a)",
+    "description": "Completed in Sprint 2.0a",
+    "date_posted": "2026-04-07T23:44:56.165Z",
+    "project": 14,
+    "sprint": 57,
+    "author": 39,
+    "assignee": 40,
+    "issue_type": "STORY",
+    "epic": null,
+    "status": "DONE",
+    "priority": "MEDIUM",
+    "story_points": 5,
+    "backlog_order": 1,
+    "initial_load": 5,
+    "remaining_load": 5,
+    "color": null,
+    "tags": []
+  }
+},
+{
+  "model": "blog.ticket",
+  "pk": 293,
+  "fields": {
+    "title": "Create onboarding wizard (Sprint 2.0a)",
+    "description": "Completed in Sprint 2.0a",
+    "date_posted": "2026-04-07T23:44:56.165Z",
+    "project": 14,
+    "sprint": 57,
+    "author": 39,
+    "assignee": 41,
+    "issue_type": "STORY",
+    "epic": null,
+    "status": "DONE",
+    "priority": "MEDIUM",
+    "story_points": 8,
+    "backlog_order": 2,
+    "initial_load": 8,
+    "remaining_load": 8,
+    "color": null,
+    "tags": []
+  }
+},
+{
+  "model": "blog.ticket",
+  "pk": 294,
+  "fields": {
+    "title": "Implement file upload service (Sprint 2.0a)",
+    "description": "Completed in Sprint 2.0a",
+    "date_posted": "2026-04-07T23:44:56.166Z",
+    "project": 14,
+    "sprint": 57,
+    "author": 39,
+    "assignee": 42,
+    "issue_type": "STORY",
+    "epic": null,
+    "status": "DONE",
+    "priority": "MEDIUM",
+    "story_points": 3,
+    "backlog_order": 3,
+    "initial_load": 3,
+    "remaining_load": 3,
+    "color": null,
+    "tags": []
+  }
+},
+{
+  "model": "blog.ticket",
+  "pk": 295,
+  "fields": {
+    "title": "Setup project scaffolding (Sprint 2.0a)",
+    "description": "Carried over from Sprint 2.0a",
+    "date_posted": "2026-04-07T23:44:56.166Z",
+    "project": 14,
+    "sprint": 57,
+    "author": 39,
+    "assignee": 43,
+    "issue_type": "STORY",
+    "epic": null,
+    "status": "IN_PROGRESS",
+    "priority": "HIGH",
+    "story_points": 5,
+    "backlog_order": 4,
+    "initial_load": 5,
+    "remaining_load": 5,
+    "color": null,
+    "tags": []
+  }
+},
+{
+  "model": "blog.ticket",
+  "pk": 296,
+  "fields": {
+    "title": "Implement user authentication flow (Sprint 2.0b)",
+    "description": "Completed in Sprint 2.0b",
+    "date_posted": "2026-04-07T23:44:56.167Z",
+    "project": 14,
+    "sprint": 58,
+    "author": 39,
+    "assignee": 40,
+    "issue_type": "STORY",
+    "epic": null,
+    "status": "DONE",
+    "priority": "MEDIUM",
+    "story_points": 5,
+    "backlog_order": 1,
+    "initial_load": 5,
+    "remaining_load": 5,
+    "color": null,
+    "tags": []
+  }
+},
+{
+  "model": "blog.ticket",
+  "pk": 297,
+  "fields": {
+    "title": "Build dashboard layout (Sprint 2.0b)",
+    "description": "Completed in Sprint 2.0b",
+    "date_posted": "2026-04-07T23:44:56.167Z",
+    "project": 14,
+    "sprint": 58,
+    "author": 39,
+    "assignee": 41,
+    "issue_type": "STORY",
+    "epic": null,
+    "status": "DONE",
+    "priority": "MEDIUM",
+    "story_points": 8,
+    "backlog_order": 2,
+    "initial_load": 8,
+    "remaining_load": 8,
+    "color": null,
+    "tags": []
+  }
+},
+{
+  "model": "blog.ticket",
+  "pk": 298,
+  "fields": {
+    "title": "Add filtering and search (Sprint 2.0b)",
+    "description": "Completed in Sprint 2.0b",
+    "date_posted": "2026-04-07T23:44:56.167Z",
+    "project": 14,
+    "sprint": 58,
+    "author": 39,
+    "assignee": 42,
+    "issue_type": "STORY",
+    "epic": null,
+    "status": "DONE",
+    "priority": "MEDIUM",
+    "story_points": 5,
+    "backlog_order": 3,
+    "initial_load": 5,
+    "remaining_load": 5,
+    "color": null,
+    "tags": []
+  }
+},
+{
+  "model": "blog.ticket",
+  "pk": 299,
+  "fields": {
+    "title": "Create data export feature (Sprint 2.0b)",
+    "description": "Completed in Sprint 2.0b",
+    "date_posted": "2026-04-07T23:44:56.168Z",
+    "project": 14,
+    "sprint": 58,
+    "author": 39,
+    "assignee": 43,
+    "issue_type": "STORY",
+    "epic": null,
+    "status": "DONE",
+    "priority": "MEDIUM",
+    "story_points": 3,
+    "backlog_order": 4,
+    "initial_load": 3,
+    "remaining_load": 3,
+    "color": null,
+    "tags": []
+  }
+},
+{
+  "model": "blog.ticket",
+  "pk": 300,
+  "fields": {
+    "title": "Implement notification system (Sprint 2.0b)",
+    "description": "Carried over from Sprint 2.0b",
+    "date_posted": "2026-04-07T23:44:56.168Z",
+    "project": 14,
+    "sprint": 58,
+    "author": 39,
+    "assignee": 45,
+    "issue_type": "STORY",
+    "epic": null,
+    "status": "IN_PROGRESS",
+    "priority": "HIGH",
+    "story_points": 8,
+    "backlog_order": 5,
+    "initial_load": 8,
+    "remaining_load": 8,
+    "color": null,
+    "tags": []
+  }
+},
+{
+  "model": "blog.ticket",
+  "pk": 301,
+  "fields": {
+    "title": "Build settings page (Sprint 2.0c)",
+    "description": "Completed in Sprint 2.0c",
+    "date_posted": "2026-04-07T23:44:56.169Z",
+    "project": 14,
+    "sprint": 59,
+    "author": 39,
+    "assignee": 40,
+    "issue_type": "STORY",
+    "epic": null,
+    "status": "DONE",
+    "priority": "MEDIUM",
+    "story_points": 8,
+    "backlog_order": 1,
+    "initial_load": 8,
+    "remaining_load": 8,
+    "color": null,
+    "tags": []
+  }
+},
+{
+  "model": "blog.ticket",
+  "pk": 302,
+  "fields": {
+    "title": "Add role-based permissions (Sprint 2.0c)",
+    "description": "Completed in Sprint 2.0c",
+    "date_posted": "2026-04-07T23:44:56.169Z",
+    "project": 14,
+    "sprint": 59,
+    "author": 39,
+    "assignee": 41,
+    "issue_type": "STORY",
+    "epic": null,
+    "status": "DONE",
+    "priority": "MEDIUM",
+    "story_points": 5,
+    "backlog_order": 2,
+    "initial_load": 5,
+    "remaining_load": 5,
+    "color": null,
+    "tags": []
+  }
+},
+{
+  "model": "blog.ticket",
+  "pk": 303,
+  "fields": {
+    "title": "Create activity log module (Sprint 2.0c)",
+    "description": "Completed in Sprint 2.0c",
+    "date_posted": "2026-04-07T23:44:56.169Z",
+    "project": 14,
+    "sprint": 59,
+    "author": 39,
+    "assignee": 42,
+    "issue_type": "STORY",
+    "epic": null,
+    "status": "DONE",
+    "priority": "MEDIUM",
+    "story_points": 3,
+    "backlog_order": 3,
+    "initial_load": 3,
+    "remaining_load": 3,
+    "color": null,
+    "tags": []
+  }
+},
+{
+  "model": "blog.ticket",
+  "pk": 304,
+  "fields": {
+    "title": "Implement caching layer (Sprint 2.0c)",
+    "description": "Completed in Sprint 2.0c",
+    "date_posted": "2026-04-07T23:44:56.170Z",
+    "project": 14,
+    "sprint": 59,
+    "author": 39,
+    "assignee": 43,
+    "issue_type": "STORY",
+    "epic": null,
+    "status": "DONE",
+    "priority": "MEDIUM",
+    "story_points": 5,
+    "backlog_order": 4,
+    "initial_load": 5,
+    "remaining_load": 5,
+    "color": null,
+    "tags": []
+  }
+},
+{
+  "model": "blog.ticket",
+  "pk": 305,
+  "fields": {
+    "title": "Build analytics dashboard (Sprint 2.0c)",
+    "description": "Completed in Sprint 2.0c",
+    "date_posted": "2026-04-07T23:44:56.170Z",
+    "project": 14,
+    "sprint": 59,
+    "author": 39,
+    "assignee": 45,
+    "issue_type": "STORY",
+    "epic": null,
+    "status": "DONE",
+    "priority": "MEDIUM",
+    "story_points": 8,
+    "backlog_order": 5,
+    "initial_load": 8,
+    "remaining_load": 8,
+    "color": null,
+    "tags": []
+  }
+},
+{
+  "model": "blog.ticket",
+  "pk": 306,
+  "fields": {
+    "title": "Add email integration (Sprint 2.0c)",
+    "description": "Carried over from Sprint 2.0c",
+    "date_posted": "2026-04-07T23:44:56.170Z",
+    "project": 14,
+    "sprint": 59,
+    "author": 39,
+    "assignee": 47,
+    "issue_type": "STORY",
+    "epic": null,
+    "status": "IN_PROGRESS",
+    "priority": "HIGH",
+    "story_points": 3,
+    "backlog_order": 6,
+    "initial_load": 3,
+    "remaining_load": 3,
+    "color": null,
+    "tags": []
+  }
+},
+{
+  "model": "blog.ticket",
+  "pk": 307,
+  "fields": {
+    "title": "Create batch processing pipeline (Sprint 3.0a)",
+    "description": "Completed in Sprint 3.0a",
+    "date_posted": "2026-04-07T23:44:56.171Z",
+    "project": 15,
+    "sprint": 62,
+    "author": 39,
+    "assignee": 42,
+    "issue_type": "STORY",
+    "epic": null,
+    "status": "DONE",
+    "priority": "MEDIUM",
+    "story_points": 5,
+    "backlog_order": 1,
+    "initial_load": 5,
+    "remaining_load": 5,
+    "color": null,
+    "tags": []
+  }
+},
+{
+  "model": "blog.ticket",
+  "pk": 308,
+  "fields": {
+    "title": "Implement websocket updates (Sprint 3.0a)",
+    "description": "Completed in Sprint 3.0a",
+    "date_posted": "2026-04-07T23:44:56.172Z",
+    "project": 15,
+    "sprint": 62,
+    "author": 39,
+    "assignee": 43,
+    "issue_type": "STORY",
+    "epic": null,
+    "status": "DONE",
+    "priority": "MEDIUM",
+    "story_points": 8,
+    "backlog_order": 2,
+    "initial_load": 8,
+    "remaining_load": 8,
+    "color": null,
+    "tags": []
+  }
+},
+{
+  "model": "blog.ticket",
+  "pk": 309,
+  "fields": {
+    "title": "Build reporting module (Sprint 3.0a)",
+    "description": "Completed in Sprint 3.0a",
+    "date_posted": "2026-04-07T23:44:56.172Z",
+    "project": 15,
+    "sprint": 62,
+    "author": 39,
+    "assignee": 44,
+    "issue_type": "STORY",
+    "epic": null,
+    "status": "DONE",
+    "priority": "MEDIUM",
+    "story_points": 3,
+    "backlog_order": 3,
+    "initial_load": 3,
+    "remaining_load": 3,
+    "color": null,
+    "tags": []
+  }
+},
+{
+  "model": "blog.ticket",
+  "pk": 310,
+  "fields": {
+    "title": "Add audit trail (Sprint 3.0a)",
+    "description": "Carried over from Sprint 3.0a",
+    "date_posted": "2026-04-07T23:44:56.173Z",
+    "project": 15,
+    "sprint": 62,
+    "author": 39,
+    "assignee": 45,
+    "issue_type": "STORY",
+    "epic": null,
+    "status": "IN_PROGRESS",
+    "priority": "HIGH",
+    "story_points": 5,
+    "backlog_order": 4,
+    "initial_load": 5,
+    "remaining_load": 5,
+    "color": null,
+    "tags": []
+  }
+},
+{
+  "model": "blog.ticket",
+  "pk": 311,
+  "fields": {
+    "title": "Create onboarding wizard (Sprint 3.0b)",
+    "description": "Completed in Sprint 3.0b",
+    "date_posted": "2026-04-07T23:44:56.173Z",
+    "project": 15,
+    "sprint": 63,
+    "author": 39,
+    "assignee": 42,
+    "issue_type": "STORY",
+    "epic": null,
+    "status": "DONE",
+    "priority": "MEDIUM",
+    "story_points": 5,
+    "backlog_order": 1,
+    "initial_load": 5,
+    "remaining_load": 5,
+    "color": null,
+    "tags": []
+  }
+},
+{
+  "model": "blog.ticket",
+  "pk": 312,
+  "fields": {
+    "title": "Implement file upload service (Sprint 3.0b)",
+    "description": "Completed in Sprint 3.0b",
+    "date_posted": "2026-04-07T23:44:56.174Z",
+    "project": 15,
+    "sprint": 63,
+    "author": 39,
+    "assignee": 43,
+    "issue_type": "STORY",
+    "epic": null,
+    "status": "DONE",
+    "priority": "MEDIUM",
+    "story_points": 8,
+    "backlog_order": 2,
+    "initial_load": 8,
+    "remaining_load": 8,
+    "color": null,
+    "tags": []
+  }
+},
+{
+  "model": "blog.ticket",
+  "pk": 313,
+  "fields": {
+    "title": "Setup project scaffolding (Sprint 3.0b)",
+    "description": "Completed in Sprint 3.0b",
+    "date_posted": "2026-04-07T23:44:56.174Z",
+    "project": 15,
+    "sprint": 63,
+    "author": 39,
+    "assignee": 44,
+    "issue_type": "STORY",
+    "epic": null,
+    "status": "DONE",
+    "priority": "MEDIUM",
+    "story_points": 5,
+    "backlog_order": 3,
+    "initial_load": 5,
+    "remaining_load": 5,
+    "color": null,
+    "tags": []
+  }
+},
+{
+  "model": "blog.ticket",
+  "pk": 314,
+  "fields": {
+    "title": "Implement user authentication flow (Sprint 3.0b)",
+    "description": "Completed in Sprint 3.0b",
+    "date_posted": "2026-04-07T23:44:56.174Z",
+    "project": 15,
+    "sprint": 63,
+    "author": 39,
+    "assignee": 45,
+    "issue_type": "STORY",
+    "epic": null,
+    "status": "DONE",
+    "priority": "MEDIUM",
+    "story_points": 3,
+    "backlog_order": 4,
+    "initial_load": 3,
+    "remaining_load": 3,
+    "color": null,
+    "tags": []
+  }
+},
+{
+  "model": "blog.ticket",
+  "pk": 315,
+  "fields": {
+    "title": "Build dashboard layout (Sprint 3.0b)",
+    "description": "Carried over from Sprint 3.0b",
+    "date_posted": "2026-04-07T23:44:56.175Z",
+    "project": 15,
+    "sprint": 63,
+    "author": 39,
+    "assignee": 42,
+    "issue_type": "STORY",
+    "epic": null,
+    "status": "IN_PROGRESS",
+    "priority": "HIGH",
+    "story_points": 8,
+    "backlog_order": 5,
+    "initial_load": 8,
+    "remaining_load": 8,
+    "color": null,
+    "tags": []
+  }
+},
+{
+  "model": "blog.ticket",
+  "pk": 316,
+  "fields": {
+    "title": "Add filtering and search (Sprint 3.0c)",
+    "description": "Completed in Sprint 3.0c",
+    "date_posted": "2026-04-07T23:44:56.175Z",
+    "project": 15,
+    "sprint": 64,
+    "author": 39,
+    "assignee": 42,
+    "issue_type": "STORY",
+    "epic": null,
+    "status": "DONE",
+    "priority": "MEDIUM",
+    "story_points": 8,
+    "backlog_order": 1,
+    "initial_load": 8,
+    "remaining_load": 8,
+    "color": null,
+    "tags": []
+  }
+},
+{
+  "model": "blog.ticket",
+  "pk": 317,
+  "fields": {
+    "title": "Create data export feature (Sprint 3.0c)",
+    "description": "Completed in Sprint 3.0c",
+    "date_posted": "2026-04-07T23:44:56.175Z",
+    "project": 15,
+    "sprint": 64,
+    "author": 39,
+    "assignee": 43,
+    "issue_type": "STORY",
+    "epic": null,
+    "status": "DONE",
+    "priority": "MEDIUM",
+    "story_points": 5,
+    "backlog_order": 2,
+    "initial_load": 5,
+    "remaining_load": 5,
+    "color": null,
+    "tags": []
+  }
+},
+{
+  "model": "blog.ticket",
+  "pk": 318,
+  "fields": {
+    "title": "Implement notification system (Sprint 3.0c)",
+    "description": "Completed in Sprint 3.0c",
+    "date_posted": "2026-04-07T23:44:56.176Z",
+    "project": 15,
+    "sprint": 64,
+    "author": 39,
+    "assignee": 44,
+    "issue_type": "STORY",
+    "epic": null,
+    "status": "DONE",
+    "priority": "MEDIUM",
+    "story_points": 3,
+    "backlog_order": 3,
+    "initial_load": 3,
+    "remaining_load": 3,
+    "color": null,
+    "tags": []
+  }
+},
+{
+  "model": "blog.ticket",
+  "pk": 319,
+  "fields": {
+    "title": "Build settings page (Sprint 3.0c)",
+    "description": "Completed in Sprint 3.0c",
+    "date_posted": "2026-04-07T23:44:56.176Z",
+    "project": 15,
+    "sprint": 64,
+    "author": 39,
+    "assignee": 45,
+    "issue_type": "STORY",
+    "epic": null,
+    "status": "DONE",
+    "priority": "MEDIUM",
+    "story_points": 5,
+    "backlog_order": 4,
+    "initial_load": 5,
+    "remaining_load": 5,
+    "color": null,
+    "tags": []
+  }
+},
+{
+  "model": "blog.ticket",
+  "pk": 320,
+  "fields": {
+    "title": "Add role-based permissions (Sprint 3.0c)",
+    "description": "Completed in Sprint 3.0c",
+    "date_posted": "2026-04-07T23:44:56.176Z",
+    "project": 15,
+    "sprint": 64,
+    "author": 39,
+    "assignee": 42,
+    "issue_type": "STORY",
+    "epic": null,
+    "status": "DONE",
+    "priority": "MEDIUM",
+    "story_points": 8,
+    "backlog_order": 5,
+    "initial_load": 8,
+    "remaining_load": 8,
+    "color": null,
+    "tags": []
+  }
+},
+{
+  "model": "blog.ticket",
+  "pk": 321,
+  "fields": {
+    "title": "Create activity log module (Sprint 3.0c)",
+    "description": "Carried over from Sprint 3.0c",
+    "date_posted": "2026-04-07T23:44:56.177Z",
+    "project": 15,
+    "sprint": 64,
+    "author": 39,
+    "assignee": 43,
+    "issue_type": "STORY",
+    "epic": null,
+    "status": "IN_PROGRESS",
+    "priority": "HIGH",
+    "story_points": 3,
+    "backlog_order": 6,
+    "initial_load": 3,
+    "remaining_load": 3,
+    "color": null,
+    "tags": []
+  }
+},
+{
+  "model": "blog.ticketlink",
+  "pk": 56,
+  "fields": {
+    "source_ticket": 246,
+    "target_ticket": 247,
+    "link_type": "RELATES_TO",
+    "created_at": "2026-04-07T23:44:56.178Z"
+  }
+},
+{
+  "model": "blog.ticketlink",
+  "pk": 57,
+  "fields": {
+    "source_ticket": 248,
+    "target_ticket": 249,
+    "link_type": "RELATES_TO",
+    "created_at": "2026-04-07T23:44:56.185Z"
+  }
+},
+{
+  "model": "blog.ticketlink",
+  "pk": 58,
+  "fields": {
+    "source_ticket": 251,
+    "target_ticket": 246,
+    "link_type": "BLOCKED_BY",
+    "created_at": "2026-04-07T23:44:56.187Z"
+  }
+},
+{
+  "model": "blog.ticketlink",
+  "pk": 59,
+  "fields": {
+    "source_ticket": 246,
+    "target_ticket": 252,
+    "link_type": "RELATES_TO",
+    "created_at": "2026-04-07T23:44:56.188Z"
+  }
+},
+{
+  "model": "blog.ticketlink",
+  "pk": 60,
+  "fields": {
+    "source_ticket": 254,
+    "target_ticket": 246,
+    "link_type": "BLOCKED_BY",
+    "created_at": "2026-04-07T23:44:56.189Z"
+  }
+},
+{
+  "model": "blog.ticketlink",
+  "pk": 61,
+  "fields": {
+    "source_ticket": 247,
+    "target_ticket": 255,
+    "link_type": "RELATES_TO",
+    "created_at": "2026-04-07T23:44:56.190Z"
+  }
+},
+{
+  "model": "blog.ticketlink",
+  "pk": 62,
+  "fields": {
+    "source_ticket": 258,
+    "target_ticket": 259,
+    "link_type": "RELATES_TO",
+    "created_at": "2026-04-07T23:44:56.191Z"
+  }
+},
+{
+  "model": "blog.ticketlink",
+  "pk": 63,
+  "fields": {
+    "source_ticket": 260,
+    "target_ticket": 261,
+    "link_type": "RELATES_TO",
+    "created_at": "2026-04-07T23:44:56.192Z"
+  }
+},
+{
+  "model": "blog.ticketlink",
+  "pk": 64,
+  "fields": {
+    "source_ticket": 263,
+    "target_ticket": 258,
+    "link_type": "BLOCKED_BY",
+    "created_at": "2026-04-07T23:44:56.192Z"
+  }
+},
+{
+  "model": "blog.ticketlink",
+  "pk": 65,
+  "fields": {
+    "source_ticket": 258,
+    "target_ticket": 264,
+    "link_type": "RELATES_TO",
+    "created_at": "2026-04-07T23:44:56.193Z"
+  }
+},
+{
+  "model": "blog.ticketlink",
+  "pk": 66,
+  "fields": {
+    "source_ticket": 266,
+    "target_ticket": 258,
+    "link_type": "BLOCKED_BY",
+    "created_at": "2026-04-07T23:44:56.194Z"
+  }
+},
+{
+  "model": "blog.ticketlink",
+  "pk": 67,
+  "fields": {
+    "source_ticket": 259,
+    "target_ticket": 267,
+    "link_type": "RELATES_TO",
+    "created_at": "2026-04-07T23:44:56.195Z"
+  }
+},
+{
+  "model": "blog.ticketlink",
+  "pk": 68,
+  "fields": {
+    "source_ticket": 270,
+    "target_ticket": 271,
+    "link_type": "RELATES_TO",
+    "created_at": "2026-04-07T23:44:56.196Z"
+  }
+},
+{
+  "model": "blog.ticketlink",
+  "pk": 69,
+  "fields": {
+    "source_ticket": 272,
+    "target_ticket": 273,
+    "link_type": "RELATES_TO",
+    "created_at": "2026-04-07T23:44:56.197Z"
+  }
+},
+{
+  "model": "blog.ticketlink",
+  "pk": 70,
+  "fields": {
+    "source_ticket": 274,
+    "target_ticket": 270,
+    "link_type": "BLOCKED_BY",
+    "created_at": "2026-04-07T23:44:56.198Z"
+  }
+},
+{
+  "model": "blog.ticketlink",
+  "pk": 71,
+  "fields": {
+    "source_ticket": 275,
+    "target_ticket": 270,
+    "link_type": "BLOCKED_BY",
+    "created_at": "2026-04-07T23:44:56.198Z"
+  }
+},
+{
+  "model": "blog.ticketlink",
+  "pk": 72,
+  "fields": {
+    "source_ticket": 271,
+    "target_ticket": 276,
+    "link_type": "RELATES_TO",
+    "created_at": "2026-04-07T23:44:56.199Z"
+  }
+},
+{
+  "model": "blog.ticketattachment",
+  "pk": 17,
+  "fields": {
+    "ticket": 244,
+    "file": "attachments/attachment_ticket_244.png",
+    "uploaded_at": "2026-04-07T23:44:56.201Z"
+  }
+},
+{
+  "model": "blog.ticketattachment",
+  "pk": 18,
+  "fields": {
+    "ticket": 246,
+    "file": "attachments/attachment_ticket_246.png",
+    "uploaded_at": "2026-04-07T23:44:56.203Z"
+  }
+},
+{
+  "model": "blog.ticketattachment",
+  "pk": 19,
+  "fields": {
+    "ticket": 248,
+    "file": "attachments/attachment_ticket_248.png",
+    "uploaded_at": "2026-04-07T23:44:56.205Z"
+  }
+},
+{
+  "model": "blog.ticketattachment",
+  "pk": 20,
+  "fields": {
+    "ticket": 250,
+    "file": "attachments/attachment_ticket_250.png",
+    "uploaded_at": "2026-04-07T23:44:56.206Z"
+  }
+},
+{
+  "model": "blog.ticketattachment",
+  "pk": 21,
+  "fields": {
+    "ticket": 252,
+    "file": "attachments/attachment_ticket_252.png",
+    "uploaded_at": "2026-04-07T23:44:56.207Z"
+  }
+},
+{
+  "model": "blog.gitrepository",
+  "pk": 10,
+  "fields": {
+    "project": 13,
+    "repository_url": "https://github.com/jiren-demo/quantum-interface",
+    "repository_type": "github",
+    "access_token": null,
+    "is_private": false,
+    "last_synced_at": null,
+    "created_at": "2026-04-07T23:44:56.208Z",
+    "updated_at": "2026-04-07T23:44:56.228Z"
+  }
+},
+{
+  "model": "blog.gitrepository",
+  "pk": 11,
+  "fields": {
+    "project": 14,
+    "repository_url": "https://gitlab.com/jiren-demo/backend-api-v2",
+    "repository_type": "gitlab",
+    "access_token": "glpat-test-placeholder-token",
+    "is_private": true,
+    "last_synced_at": null,
+    "created_at": "2026-04-07T23:44:56.229Z",
+    "updated_at": "2026-04-07T23:44:56.230Z"
+  }
+}
+]

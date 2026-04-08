@@ -103,6 +103,11 @@
             <a href="{% url 'project-create' %}" class="helb-topnav-new">New +</a>
         {% endif %}
 
+        <button type="button" class="helb-theme-toggle" id="themeToggleButton" aria-label="Switch color theme">
+            <span class="material-symbols-outlined" id="themeToggleIcon">dark_mode</span>
+            <span class="helb-theme-toggle__label" id="themeToggleLabel">Dark Mode</span>
+        </button>
+
         <a href="{% url 'profile' %}" class="helb-user-chip">
             <img src="{{ user.profile.image.url }}" alt="{{ user.username }}">
             <span class="helb-user-chip__text d-none d-xl-flex">
@@ -147,11 +152,6 @@
     {% endif %}
     {% block content %}{% endblock %}
 </main>
-
-<button type="button" class="helb-theme-fab" id="themeToggleButton" aria-label="Switch color theme">
-    <span class="material-symbols-outlined" id="themeToggleIcon">dark_mode</span>
-    <span class="sr-only" id="themeToggleLabel">Dark mode</span>
-</button>
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" crossorigin="anonymous"></script>

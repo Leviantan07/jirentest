@@ -3286,3 +3286,24 @@ select.custom-select-sm {
     grid-template-columns: 1fr;
   }
 }
+
+/* ============================================================
+   LIGHT MODE ONLY - Container Borders for Better Distinction
+   Apply Analytics-style borders to all containers in light mode
+   ============================================================ */
+
+html:not([data-theme="dark"]) .kanban-column-shell,
+html:not([data-theme="dark"]) .kanban-card,
+html:not([data-theme="dark"]) .helb-card,
+html:not([data-theme="dark"]) .helb-card-sm,
+html:not([data-theme="dark"]) .card,
+html:not([data-theme="dark"]) .content-section,
+html:not([data-theme="dark"]) .atelier-panel,
+html:not([data-theme="dark"]) .atelier-project-card,
+html:not([data-theme="dark"]) .atelier-role-table-shell {
+  border: 2px solid var(--helb-outline) !important;
+  background: var(--helb-surface-container) !important;
+  box-shadow: var(--helb-shadow-lg) !important;
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
+}

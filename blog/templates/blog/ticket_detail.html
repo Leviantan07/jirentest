@@ -105,6 +105,51 @@
       </article>
     {% endif %}
 
+    {# Commits section — visible for done tickets or when commits already linked #}
+    {% if object.status == 'DONE' or commit_links %}
+      <article class="stitch-ticket-card">
+        <div class="stitch-panel-head">
+          <h3 class="stitch-card-title">
+            <span class="material-symbols-outlined">commit</span>
+            Commits
+          </h3>
+          {% if object.status == 'DONE' %}
+            <a href="{% url 'ticket-commit-select' project_pk=object.project.pk ticket_pk=object.pk %}"
+               class="btn btn-primary btn-sm">
+              + Link a Commit
+            </a>
+          {% endif %}
+        </div>
+        {% if commit_links %}
+          <div class="stitch-ticket-list">
+            {% for link in commit_links %}
+              <article class="stitch-ticket-row">
+                <div>
+                  <div class="stitch-chip-row stitch-chip-row--compact" style="margin-bottom:.25rem;">
+                    <a href="{{ link.git_commit.commit_url }}" target="_blank" rel="noopener noreferrer"
+                       class="atelier-badge" style="font-family:monospace;">
+                      {{ link.git_commit.sha_short }}
+                    </a>
+                    <span class="stitch-muted-note small">{{ link.git_commit.author_name }}</span>
+                  </div>
+                  <p class="stitch-ticket-row__title mb-0">{{ link.git_commit.message|truncatechars:100 }}</p>
+                </div>
+                <div class="stitch-ticket-row__aside">
+                  <span class="stitch-muted-note small">{{ link.git_commit.commit_date|date:"d M Y" }}</span>
+                </div>
+              </article>
+            {% endfor %}
+          </div>
+          <div class="mt-2">
+            <a href="{% url 'ticket-commits-list' project_pk=object.project.pk ticket_pk=object.pk %}"
+               class="stitch-muted-note small">View all &rarr;</a>
+          </div>
+        {% else %}
+          <p class="stitch-muted-note">No commits linked yet. Push a commit on GitHub and link it here.</p>
+        {% endif %}
+      </article>
+    {% endif %}
+
     {% if object.issue_type == 'EPIC' %}
       <article class="stitch-ticket-card">
         <h3 class="stitch-card-title mb-4">

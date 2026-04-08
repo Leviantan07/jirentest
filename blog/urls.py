@@ -2,6 +2,11 @@ from django.urls import path
 from .views.statistics import ProjectStatisticsView
 from .views.git_setup import GitRepositoryCreateView, GitRepositoryUpdateView
 from .views import AnalyticsView
+from .views.ticket_commits import (
+    ticket_commit_list_view,
+    ticket_commit_select_view,
+    ticket_link_commit_view,
+)
 
 from . import views
 from .views import (
@@ -24,6 +29,7 @@ from .views import (
     move_backlog_ticket,
     project_active_sprint,
     project_tags,
+    reorder_backlog_tickets,
     sprint_admin,
     sprint_close,
     sprint_start,
@@ -64,6 +70,11 @@ urlpatterns = [
         move_backlog_ticket,
         name="move-backlog-ticket",
     ),
+    path(
+        "project/<int:pk>/backlog/reorder/",
+        reorder_backlog_tickets,
+        name="project-backlog-reorder",
+    ),
 
     path("sprints/admin/", SprintAdminIndexView.as_view(), name="sprint-admin-index"),
     path("project/<int:pk>/sprints/admin/", sprint_admin, name="sprint-admin"),
@@ -79,4 +90,21 @@ urlpatterns = [
     # Git repository setup
     path("project/<int:project_pk>/git/add/", GitRepositoryCreateView.as_view(), name="git-setup-create"),
     path("project/<int:project_pk>/git/edit/", GitRepositoryUpdateView.as_view(), name="git-setup-update"),
+
+    # Ticket commit linking
+    path(
+        "project/<int:project_pk>/tickets/<int:ticket_pk>/commits/",
+        ticket_commit_list_view,
+        name="ticket-commits-list",
+    ),
+    path(
+        "project/<int:project_pk>/tickets/<int:ticket_pk>/commits/select/",
+        ticket_commit_select_view,
+        name="ticket-commit-select",
+    ),
+    path(
+        "project/<int:project_pk>/tickets/<int:ticket_pk>/commits/link/",
+        ticket_link_commit_view,
+        name="ticket-commit-link",
+    ),
 ]

@@ -3,6 +3,7 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.db.models import Case, Count, IntegerField, Q, Sum, Value, When
+from django.http import Http404
 from django.shortcuts import get_object_or_404, redirect
 from django.urls import reverse
 from django.utils import timezone
@@ -337,6 +338,25 @@ class ProjectBacklogView(LoginRequiredMixin, DetailView):
     model = Project
     template_name = "blog/project_backlog.html"
     context_object_name = "project"
+
+    def get(self, request, *args, **kwargs):
+        try:
+            return super().get(request, *args, **kwargs)
+        except Http404:
+            fallback_project_id = (
+                visible_projects(request.user)
+                .order_by("name")
+                .values_list("pk", flat=True)
+                .first()
+            )
+            if fallback_project_id:
+                messages.warning(
+                    request,
+                    "Selected project was not found. Redirected to an available project.",
+                )
+                return redirect("project-backlog", pk=fallback_project_id)
+            messages.warning(request, "No accessible project found.")
+            return redirect("blog-home")
 
     def get_queryset(self):
         return visible_projects(self.request.user).select_related("git_repository")

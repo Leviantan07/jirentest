@@ -1,0 +1,52 @@
+<div id="backlog-list-container">
+  {% if selected_tag and user_is_admin %}
+    <p class="stitch-muted-note mb-3">Drag and drop is disabled while a tag filter is active. Clear filter to reorder globally.</p>
+  {% endif %}
+
+  {% if backlog_items %}
+    <div
+      class="stitch-backlog-list"
+      id="backlog-sortable"
+      data-reorder-enabled="{% if user_is_admin and not selected_tag %}1{% else %}0{% endif %}"
+      data-reorder-url="{% url 'project-backlog-reorder' project.pk %}{% if selected_tag %}?tag={{ selected_tag.pk }}{% endif %}"
+    >
+      {% for item in backlog_items %}
+        <article class="stitch-backlog-item" data-ticket-id="{{ item.pk }}">
+          <div class="stitch-backlog-item__rank">{{ forloop.counter|stringformat:"02d" }}</div>
+          <div class="stitch-backlog-item__body">
+            <div class="stitch-chip-row stitch-chip-row--compact">
+              {% if item.issue_type == 'EPIC' %}
+                <span class="atelier-badge atelier-badge--epic">Epic</span>
+              {% elif item.issue_type == 'BUG' %}
+                <span class="atelier-badge atelier-badge--bug">Bug</span>
+              {% elif item.issue_type == 'STORY' %}
+                <span class="atelier-badge atelier-badge--story">Story</span>
+              {% else %}
+                <span class="atelier-badge atelier-badge--task">Task</span>
+              {% endif %}
+              <span class="atelier-status-pill atelier-status-pill--{% if item.status == 'DONE' %}done{% elif item.status == 'IN_PROGRESS' %}progress{% else %}todo{% endif %}">{{ item.get_status_display }}</span>
+            </div>
+            <a href="{% url 'ticket-detail' item.pk %}" class="stitch-backlog-item__title">{{ item.title }}</a>
+            <div class="stitch-backlog-item__meta">
+              {% if item.epic %}<span>Epic: {{ item.epic.title }}</span>{% endif %}
+              <span>{% if item.assignee %}Assigned to {{ item.assignee.get_full_name|default:item.assignee.username }}{% else %}Unassigned{% endif %}</span>
+              <span>{{ item.get_priority_display }}</span>
+            </div>
+            {% include "blog/includes/tag_chips.html" with ticket=item %}
+          </div>
+          <div class="stitch-backlog-item__controls">
+            {% if item.assignee %}
+              <img src="{{ item.assignee.profile.image.url }}" alt="{{ item.assignee.username }}" class="atelier-user-inline__avatar">
+            {% endif %}
+          </div>
+        </article>
+      {% endfor %}
+    </div>
+  {% else %}
+    <div class="atelier-empty-state atelier-empty-state--table">
+      <span class="material-symbols-outlined atelier-empty-state__icon">list_alt</span>
+      <h3 class="atelier-empty-state__title">Backlog is empty</h3>
+      <p class="atelier-empty-state__copy">Create a story, bug, or task to start planning the next sprint.</p>
+    </div>
+  {% endif %}
+</div>

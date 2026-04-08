@@ -1,3 +1,4 @@
+from .commit import LinkCommitForm
 from .project import (
     ProjectForm,
     RemainingLoadUpdateForm,
@@ -8,6 +9,7 @@ from .project import (
 from .ticket import TicketForm
 
 __all__ = [
+    "LinkCommitForm",
     "ProjectForm",
     "RemainingLoadUpdateForm",
     "RichTextTextarea",

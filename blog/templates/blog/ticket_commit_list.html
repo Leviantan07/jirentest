@@ -1,0 +1,75 @@
+{% extends "blog/base.html" %}
+
+{% block content %}
+<section class="stitch-ticket-layout">
+  <div class="stitch-ticket-main">
+    <div class="stitch-ticket-heading">
+      <div class="stitch-ticket-kicker">
+        <a href="{% url 'ticket-detail' ticket.pk %}">&larr; Back to {{ ticket.title }}</a>
+      </div>
+      <h1 class="stitch-ticket-title">Linked Commits</h1>
+      <p class="stitch-ticket-subtitle">
+        {{ ticket.project.code_prefix|default:'JIREN' }}-{{ ticket.id }} &bull; {{ ticket.title }}
+      </p>
+    </div>
+
+    {% if messages %}
+      {% for msg in messages %}
+        <div class="alert alert-{{ msg.tags }} mb-3">{{ msg }}</div>
+      {% endfor %}
+    {% endif %}
+
+    <article class="stitch-ticket-card">
+      <div class="stitch-panel-head">
+        <h3 class="stitch-card-title">
+          <span class="material-symbols-outlined">commit</span>
+          Commits ({{ commit_links|length }})
+        </h3>
+        {% if can_link_commits %}
+          <a href="{% url 'ticket-commit-select' project_pk=project.pk ticket_pk=ticket.pk %}"
+             class="btn btn-primary btn-sm">
+            + Link a Commit
+          </a>
+        {% endif %}
+      </div>
+
+      {% if commit_links %}
+        <div class="stitch-ticket-list">
+          {% for link in commit_links %}
+            <article class="stitch-ticket-row">
+              <div>
+                <div class="stitch-chip-row stitch-chip-row--compact" style="margin-bottom:.25rem;">
+                  <a href="{{ link.git_commit.commit_url }}" target="_blank" rel="noopener noreferrer"
+                     class="atelier-badge" style="font-family:monospace;">
+                    {{ link.git_commit.sha_short }}
+                  </a>
+                  <span class="stitch-muted-note small">{{ link.git_commit.author_name }}</span>
+                </div>
+                <p class="stitch-ticket-row__title mb-0">{{ link.git_commit.message|truncatechars:120 }}</p>
+              </div>
+              <div class="stitch-ticket-row__aside">
+                <span class="stitch-muted-note small">
+                  {{ link.git_commit.commit_date|date:"d M Y H:i" }}
+                </span>
+                {% if link.linked_by %}
+                  <span class="stitch-muted-note small">by {{ link.linked_by.username }}</span>
+                {% endif %}
+              </div>
+            </article>
+          {% endfor %}
+        </div>
+      {% else %}
+        <p class="stitch-muted-note">No commits linked yet.</p>
+        {% if can_link_commits %}
+          <a href="{% url 'ticket-commit-select' project_pk=project.pk ticket_pk=ticket.pk %}"
+             class="btn btn-primary btn-sm mt-2">
+            Link the first commit
+          </a>
+        {% else %}
+          <p class="stitch-muted-note small">Mark the ticket as <strong>Done</strong> to link commits.</p>
+        {% endif %}
+      {% endif %}
+    </article>
+  </div>
+</section>
+{% endblock %}

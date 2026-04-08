@@ -334,3 +334,46 @@
 .helb-main--public {
   margin-left: 0;
 }
+
+/* Theme Toggle — Navbar Integration */
+.helb-theme-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  background: var(--helb-surface-container);
+  color: var(--helb-on-surface);
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  white-space: nowrap;
+}
+
+.helb-theme-toggle:hover {
+  background: var(--helb-surface-container-high);
+  color: var(--helb-on-surface-variant);
+  transform: translateY(-2px);
+}
+
+.helb-theme-toggle:active {
+  transform: translateY(0);
+}
+
+.helb-theme-toggle .material-symbols-outlined {
+  font-size: 1.25rem;
+  line-height: 1.25rem;
+}
+
+.helb-theme-toggle__label {
+  display: none;
+}
+
+/* Show label on medium screens and up */
+@media (min-width: 768px) {
+  .helb-theme-toggle__label {
+    display: inline;
+  }
+}

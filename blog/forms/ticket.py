@@ -9,6 +9,94 @@ from ..models.tag import normalize_tag_name
 from ..rich_text import sanitize_rich_text
 
 
+# Description templates by issue type
+TICKET_TEMPLATES = {
+    "story": """📖 USER STORY (As... I want... so that...)
+
+As a <role/persona>,
+I want <action/feature>,
+so that <benefit/value>.
+
+✅ ACCEPTANCE CRITERIA:
+- Criteria 1: ...
+- Criteria 2: ...
+- Criteria 3: ...
+
+📎 RESOURCES / REFERENCES:
+- Link 1: ...
+
+🎯 NOTES:
+...""",
+
+    "bug": """🐛 BUG REPORT
+
+🔍 CONTEXT:
+- Environment: (dev/staging/prod)
+- Browser/Version: 
+- Steps: ...
+
+❌ PROBLEM:
+What is not working correctly?
+
+✅ EXPECTED BEHAVIOR:
+What should happen instead?
+
+📸 ACTUAL RESULT:
+What did you observe? (screenshot/error)
+
+🔄 STEPS TO REPRODUCE:
+1. ...
+2. ...
+3. ...
+
+💾 ADDITIONAL INFORMATION:
+- App version: 
+- Error log: ...""",
+
+    "task": """☑️ TASK (Technical work)
+
+📋 DESCRIPTION:
+What do we need to do?
+
+🎯 OBJECTIVE:
+What is the expected outcome?
+
+📝 ITEMS TO COVER:
+- [ ] Item 1
+- [ ] Item 2
+- [ ] Item 3
+
+⚙️ TECHNICAL DETAILS:
+- Files to modify: ...
+- Dependencies: ...
+
+📎 REFERENCES:
+- PR: ...
+- Documentation: ...""",
+
+    "epic": """🏔️ EPIC (Major initiative)
+
+📖 DESCRIPTION:
+What is this epic about?
+
+🎯 OBJECTIVES:
+- Objective 1: ...
+- Objective 2: ...
+
+📝 USER STORIES INCLUDED:
+- US#1: ...
+- US#2: ...
+
+⏱️ TIMELINE:
+- Phase 1: ...
+- Phase 2: ...
+
+📊 SUCCESS METRICS:
+- Metric 1: ...
+- Metric 2: ...""",
+}
+
+
 class TicketForm(forms.ModelForm):
     tags_input = forms.CharField(
         label="Tags",
@@ -36,7 +124,11 @@ class TicketForm(forms.ModelForm):
         ]
         widgets = {
             "issue_type": forms.RadioSelect(),
-            "description": RichTextTextarea(attrs={"rows": 10, "data-rich-text-source": "true"}),
+            "description": RichTextTextarea(attrs={
+                "rows": 10,
+                "data-rich-text-source": "true",
+                "class": "tw-w-full tw-px-3 tw-py-2 tw-border tw-border-[var(--helb-outline-variant)] tw-rounded tw-bg-[var(--helb-surface-container-low)] tw-text-[var(--helb-on-surface)] tw-text-sm focus:tw-outline-none focus:tw-border-[var(--helb-primary)] focus:tw-ring-1 focus:tw-ring-[var(--helb-primary)]",
+            }),
         }
 
     def __init__(self, *args, **kwargs):

@@ -1,0 +1,67 @@
+{% extends "blog/base.html" %}
+
+{% block content %}
+<section class="stitch-ticket-layout">
+  <div class="stitch-ticket-main">
+    <div class="stitch-ticket-heading">
+      <div class="stitch-ticket-kicker">
+        <a href="{% url 'ticket-detail' ticket.pk %}">&larr; Back to {{ ticket.title }}</a>
+      </div>
+      <h1 class="stitch-ticket-title">Link a Commit</h1>
+      <p class="stitch-ticket-subtitle">
+        {{ ticket.project.code_prefix|default:'JIREN' }}-{{ ticket.id }} &bull; {{ ticket.title }}
+      </p>
+    </div>
+
+    {% if ticket.status != 'DONE' %}
+      <article class="stitch-ticket-card">
+        <div class="stitch-panel-head">
+          <h3 class="stitch-card-title">
+            <span class="material-symbols-outlined">commit</span>
+            Commit Linking Unavailable
+          </h3>
+        </div>
+        <p class="stitch-muted-note">
+          Commits can only be linked to tickets with status <strong>Done</strong>.
+          This ticket is currently <strong>{{ ticket.get_status_display }}</strong>.
+        </p>
+        <a href="{% url 'ticket-detail' ticket.pk %}" class="btn btn-secondary btn-sm mt-2">Back to ticket</a>
+      </article>
+    {% else %}
+      <article class="stitch-ticket-card">
+        <div class="stitch-panel-head">
+          <h3 class="stitch-card-title">
+            <span class="material-symbols-outlined">commit</span>
+            Select a Commit to Link
+          </h3>
+        </div>
+        {% if messages %}
+          {% for msg in messages %}
+            <div class="alert alert-{{ msg.tags }} mb-3">{{ msg }}</div>
+          {% endfor %}
+        {% endif %}
+        <form method="post" action="{% url 'ticket-commit-link' project_pk=project.pk ticket_pk=ticket.pk %}">
+          {% csrf_token %}
+          <div class="mb-3">
+            {{ form.commit.label_tag }}
+            {{ form.commit }}
+            {% if form.commit.errors %}
+              <div class="text-danger small mt-1">{{ form.commit.errors|join:', ' }}</div>
+            {% endif %}
+          </div>
+          {% if form.commit.queryset.count == 0 %}
+            <p class="stitch-muted-note">No unlinked commits available for this project's repository.</p>
+          {% else %}
+            <button type="submit" class="btn btn-primary">Link Commit</button>
+          {% endif %}
+        </form>
+        <div class="mt-3">
+          <a href="{% url 'ticket-commits-list' project_pk=project.pk ticket_pk=ticket.pk %}" class="stitch-muted-note small">
+            View already linked commits &rarr;
+          </a>
+        </div>
+      </article>
+    {% endif %}
+  </div>
+</section>
+{% endblock %}

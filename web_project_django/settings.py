@@ -33,6 +33,10 @@ SECRET_KEY = os.getenv(
     'django-insecure-#5ez_re3pxgd#dw68&2)s_6)#nxesn7r1=@xjygn-94+q@um1#'  # DEV ONLY
 )
 
+# GitHub webhook secret — set this in production via environment variable
+# Configure the same value in GitHub → Settings → Webhooks → Secret
+GITHUB_WEBHOOK_SECRET = os.getenv('GITHUB_WEBHOOK_SECRET', '')
+
 # SECURITY WARNING: don't run with debug turned on in production!
 # Default to True for development (safer). Set DEBUG=False in production.
 DEBUG = os.getenv('DEBUG', 'True') == 'True'

@@ -3,14 +3,21 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.core.exceptions import ValidationError
 from django.db import transaction
+from django.http import HttpResponseBadRequest
 from django.shortcuts import get_object_or_404, redirect, render
 from django.urls import reverse
 from django.views.generic import ListView, UpdateView
 
 from ..forms import SprintAdminForm, SprintStatusForm
-from ..models import Project, Sprint
+from ..models import Project, Sprint, Ticket
 from .permissions import can_manage_sprints, is_admin, visible_projects
-from .queries import capacity_rows, project_backlog_queryset, save_sprint_user_capacities
+from .queries import (
+    capacity_rows,
+    filter_tickets_by_tag,
+    project_backlog_queryset,
+    resolve_tag_filter,
+    save_sprint_user_capacities,
+)
 
 
 class SprintAdminIndexView(LoginRequiredMixin, UserPassesTestMixin, ListView):
@@ -202,7 +209,6 @@ def delete_sprint(request, pk):
 
 @login_required
 def move_backlog_ticket(request, pk, direction):
-    from ..models import Ticket
     ticket = get_object_or_404(
         Ticket.objects.select_related("project", "sprint"),
         pk=pk,
@@ -246,6 +252,74 @@ def move_backlog_ticket(request, pk, direction):
 
     messages.success(request, "Backlog priority updated.")
     return redirect("project-backlog", pk=ticket.project_id)
+
+
+@login_required
+def reorder_backlog_tickets(request, pk):
+    project = get_object_or_404(visible_projects(request.user), pk=pk)
+    if not can_manage_sprints(request.user, project):
+        return HttpResponseBadRequest("Access denied.")
+    if request.method != "POST":
+        return HttpResponseBadRequest("POST required.")
+
+    ordered_ids_raw = request.POST.get("ordered_ids", "")
+    if not ordered_ids_raw.strip():
+        return HttpResponseBadRequest("Missing ordered_ids.")
+
+    requested_ids = []
+    for raw_id in ordered_ids_raw.split(","):
+        raw_id = raw_id.strip()
+        if not raw_id:
+            continue
+        try:
+            ticket_id = int(raw_id)
+        except ValueError:
+            return HttpResponseBadRequest("Invalid ticket id.")
+        if ticket_id not in requested_ids:
+            requested_ids.append(ticket_id)
+
+    backlog_ids = list(project_backlog_queryset(project).values_list("id", flat=True))
+    if not backlog_ids:
+        return HttpResponseBadRequest("Backlog is empty.")
+
+    backlog_id_set = set(backlog_ids)
+    requested_id_set = set(requested_ids)
+    if not requested_ids or not requested_id_set.issubset(backlog_id_set):
+        return HttpResponseBadRequest("Invalid backlog ordering payload.")
+
+    visible_ids_in_current_order = [ticket_id for ticket_id in backlog_ids if ticket_id in requested_id_set]
+    if set(visible_ids_in_current_order) != requested_id_set:
+        return HttpResponseBadRequest("Ordering payload mismatch.")
+
+    iterator = iter(requested_ids)
+    reordered_ids = [
+        next(iterator) if ticket_id in requested_id_set else ticket_id
+        for ticket_id in backlog_ids
+    ]
+
+    with transaction.atomic():
+        ticket_map = Ticket.objects.in_bulk(reordered_ids)
+        for order, ticket_id in enumerate(reordered_ids):
+            ticket = ticket_map.get(ticket_id)
+            if ticket and ticket.backlog_order != order:
+                ticket.backlog_order = order
+                ticket.save(update_fields=["backlog_order"])
+
+    project_tickets = project.tickets.all()
+    _, selected_tag = resolve_tag_filter(request, project_tickets)
+    backlog_items = list(
+        filter_tickets_by_tag(project_backlog_queryset(project), selected_tag)
+    )
+    return render(
+        request,
+        "blog/includes/backlog_list.html",
+        {
+            "project": project,
+            "backlog_items": backlog_items,
+            "user_is_admin": is_admin(request.user),
+            "selected_tag": selected_tag,
+        },
+    )
 
 
 def _find_swap_target(backlog_items, current_index, direction):

@@ -6,6 +6,11 @@ from django.urls import path, re_path
 from .api_views_tag import TagViewSet
 from .api_views_ticket import TicketTagViewSet
 from .api_views_git import git_repository_info, git_repository_branches
+from .api_views_commit import (
+    github_webhook_receiver,
+    available_commits_for_ticket,
+    link_commit_to_ticket,
+)
 
 # Simple tag endpoints using path converters
 tag_views = TagViewSet.as_view({
@@ -55,4 +60,18 @@ urlpatterns = [
     path('projects/<int:project_pk>/git/branches/', 
          git_repository_branches, 
          name='api-git-repository-branches'),
+
+    # GitHub webhook endpoint — publicly accessible, signature-validated
+    path('webhooks/github/',
+         github_webhook_receiver,
+         name='api-github-webhook'),
+
+    # Commit endpoints per ticket
+    path('projects/<int:project_pk>/tickets/<int:ticket_pk>/commits/',
+         available_commits_for_ticket,
+         name='api-ticket-available-commits'),
+
+    path('projects/<int:project_pk>/tickets/<int:ticket_pk>/commits/link/',
+         link_commit_to_ticket,
+         name='api-ticket-link-commit'),
 ]

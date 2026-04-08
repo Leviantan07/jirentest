@@ -80,16 +80,9 @@
 
         {# LEFT COLUMN — Title + Description (3/5) #}
         <div class="lg:tw-col-span-3 tw-space-y-4">
-          <p class="tw-text-[var(--helb-on-surface-variant)] tw-text-xs tw-m-0">
-            Leave Sprint empty to keep the ticket in backlog.
-          </p>
-
           {{ form.title|as_crispy_field }}
 
           {{ form.description|as_crispy_field }}
-          <p class="tw-text-[var(--helb-on-surface-variant)] tw-text-xs tw-mt-[-0.5rem] tw-mb-4">
-            Format the description and insert images directly into the content.
-          </p>
 
           {# ── Recent commits panel — visible only on create when project has a git repo ── #}
           {% if not object and recent_commits %}
@@ -105,10 +98,7 @@
                   data-message="{{ commit.message|truncatechars:120 }}"
                   title="{{ commit.message }}">
                 <code class="tw-text-xs tw-font-mono tw-text-[var(--helb-secondary)] tw-shrink-0 tw-mt-0.5 tw-select-none">{{ commit.hash }}</code>
-                <div class="tw-flex tw-flex-col tw-gap-0.5 tw-min-w-0">
-                  <span class="tw-text-sm tw-text-[var(--helb-on-surface)] tw-font-medium tw-truncate">{{ commit.message|truncatechars:80 }}</span>
-                  <span class="tw-text-xs tw-text-[var(--helb-on-surface-variant)]">{{ commit.author }} &middot; {{ commit.timestamp }}</span>
-                </div>
+                <span class="tw-text-xs tw-text-[var(--helb-on-surface-variant)] tw-line-clamp-2">{{ commit.message|truncatechars:120 }}</span>
               </li>
               {% endfor %}
             </ul>
@@ -116,203 +106,56 @@
           {% endif %}
         </div>
 
-        {# RIGHT COLUMN — Metadata (2/5) #}
+        {# RIGHT COLUMN — Fields (2/5) #}
         <div class="lg:tw-col-span-2 tw-space-y-4">
-
-          {% if form.project %}
-            {{ form.project|as_crispy_field }}
-          {% endif %}
-
-          <div id="div_id_sprint_wrapper">
-            {{ form.sprint|as_crispy_field }}
-          </div>
-
-          {# ── Epic dropdown ── #}
-          <div class="form-group" id="div_id_epic_wrapper">
-            <label for="epicDropdownButton">{{ form.epic.label }}</label>
-            <div class="dropdown tw-w-full">
-              <button
-                class="btn btn-outline-secondary dropdown-toggle tw-w-full tw-text-left tw-flex tw-justify-between tw-items-center tw-gap-2 tw-whitespace-nowrap tw-overflow-visible"
-                type="button"
-                id="epicDropdownButton"
-                data-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"
-              >
-                <span id="epicDropdownLabel" class="tw-truncate">Epic</span>
-              </button>
-              <div
-                class="dropdown-menu tw-w-full tw-p-3 tw-max-h-[260px] tw-overflow-y-auto"
-                aria-labelledby="epicDropdownButton"
-                id="epicDropdownMenu"
-              >
-                <div id="epicDropdownOptions"></div>
-              </div>
-            </div>
-            <div class="d-none">{{ form.epic }}</div>
-            {% if form.epic.errors %}
-              <div class="invalid-feedback d-block">
-                {% for error in form.epic.errors %}<div>{{ error }}</div>{% endfor %}
-              </div>
-            {% endif %}
-          </div>
-
-          {# ── Assignee dropdown ── #}
-          <div class="form-group">
-            <label for="assigneeDropdownButton">{{ form.assignee.label }}</label>
-            <div class="dropdown tw-w-full">
-              <button
-                class="btn btn-outline-secondary dropdown-toggle tw-w-full tw-text-left tw-flex tw-justify-between tw-items-center tw-gap-2 tw-whitespace-nowrap tw-overflow-visible"
-                type="button"
-                id="assigneeDropdownButton"
-                data-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"
-              >
-                <span id="assigneeDropdownLabel" class="tw-truncate">Assignee</span>
-              </button>
-              <div
-                class="dropdown-menu tw-w-full tw-p-3 tw-max-h-[260px] tw-overflow-y-auto"
-                aria-labelledby="assigneeDropdownButton"
-                id="assigneeDropdownMenu"
-              >
-                <div id="assigneeDropdownOptions"></div>
-              </div>
-            </div>
-            <div class="d-none">{{ form.assignee }}</div>
-            {% if form.assignee.errors %}
-              <div class="invalid-feedback d-block">
-                {% for error in form.assignee.errors %}<div>{{ error }}</div>{% endfor %}
-              </div>
-            {% endif %}
-          </div>
-
-          {% if object %}
-            {{ form.status|as_crispy_field }}
-          {% endif %}
-
+          {{ form.project|as_crispy_field }}
+          {{ form.sprint|as_crispy_field }}
+          {{ form.epic|as_crispy_field }}
+          {{ form.assignee|as_crispy_field }}
           {{ form.priority|as_crispy_field }}
+          {{ form.story_points|as_crispy_field }}
+        </div>
+      </div>
 
+      {# ── Tags + Attachments ────────────────────────────────── #}
+      <div class="tw-px-6 tw-py-4 lg:tw-grid lg:tw-grid-cols-5 lg:tw-gap-8">
+        <div class="lg:tw-col-span-3 tw-space-y-4">
           {{ form.tags_input|as_crispy_field }}
 
-          {# ── Story points / load grid ── #}
-          <div class="lg:tw-grid lg:tw-grid-cols-2 lg:tw-gap-3">
-            <div id="div_id_story_points_wrapper">
-              {{ form.story_points|as_crispy_field }}
-            </div>
-            <div id="div_id_initial_load_wrapper">
-              {{ form.initial_load|as_crispy_field }}
-            </div>
+          <div>
+            <label for="id_attachments" class="tw-block tw-text-sm tw-font-semibold tw-text-[var(--helb-on-surface)] tw-mb-2">Attachments</label>
+            <input type="file" id="id_attachments" name="attachments" multiple class="tw-block tw-w-full">
+            <div id="attachmentsList" class="tw-mt-2"></div>
           </div>
-          <div id="div_id_remaining_load_wrapper">
-            {{ form.remaining_load|as_crispy_field }}
-          </div>
+        </div>
 
-          <div id="div_id_color_wrapper">
-            {{ form.color|as_crispy_field }}
-          </div>
+        <div class="lg:tw-col-span-2 tw-space-y-4">
+          {{ form.color|as_crispy_field }}
+          {{ form.initial_load|as_crispy_field }}
+          {{ form.remaining_load|as_crispy_field }}
+        </div>
+      </div>
 
-          {# ── Blocked by ── #}
-          <div class="form-group">
-            <div class="tw-flex tw-justify-between tw-items-center tw-mb-2">
-              <label class="tw-mb-0" for="id_blocked_by_tickets">{{ form.blocked_by_tickets.label }}</label>
-              <button
-                type="button"
-                class="btn btn-sm btn-outline-info tw-whitespace-nowrap tw-overflow-visible"
-                id="blockedByToggleButton"
-                aria-controls="blockedByPanel"
-                aria-expanded="false"
-              >
-                Add link
-              </button>
-            </div>
-            <div class="d-none">{{ form.blocked_by_tickets }}</div>
-            <div class="link-selector-panel tw-px-3 tw-py-3">
-              <div id="blockedBySelected"></div>
-              <p id="blockedByEmptyState" class="text-muted small tw-mb-0">None selected.</p>
-              <div id="blockedByPanel" class="tw-mt-3 tw-pt-3 tw-border-t tw-border-[var(--helb-outline-variant)] d-none">
-                <div id="blockedByOptions" class="link-selector-options"></div>
-              </div>
-            </div>
-            {% if form.blocked_by_tickets.errors %}
-              <div class="invalid-feedback d-block">
-                {% for error in form.blocked_by_tickets.errors %}<div>{{ error }}</div>{% endfor %}
-              </div>
-            {% endif %}
-          </div>
+      {# ── Ticket Links ────────────────────────────────────────── #}
+      {% if form.blocked_by_tickets %}
+      <div class="tw-px-6 tw-py-4 lg:tw-grid lg:tw-grid-cols-5 lg:tw-gap-8">
+        <div class="lg:tw-col-span-3 tw-space-y-4">
+          {{ form.blocked_by_tickets|as_crispy_field }}
+        </div>
+        <div class="lg:tw-col-span-2 tw-space-y-4">
+          {{ form.relates_to_tickets|as_crispy_field }}
+        </div>
+      </div>
+      {% endif %}
 
-          {# ── Relates to ── #}
-          <div class="form-group">
-            <div class="tw-flex tw-justify-between tw-items-center tw-mb-2">
-              <label class="tw-mb-0" for="id_relates_to_tickets">{{ form.relates_to_tickets.label }}</label>
-              <button
-                type="button"
-                class="btn btn-sm btn-outline-info tw-whitespace-nowrap tw-overflow-visible"
-                id="relatesToToggleButton"
-                aria-controls="relatesToPanel"
-                aria-expanded="false"
-              >
-                Add link
-              </button>
-            </div>
-            <div class="d-none">{{ form.relates_to_tickets }}</div>
-            <div class="link-selector-panel tw-px-3 tw-py-3">
-              <div id="relatesToSelected"></div>
-              <p id="relatesToEmptyState" class="text-muted small tw-mb-0">None selected.</p>
-              <div id="relatesToPanel" class="tw-mt-3 tw-pt-3 tw-border-t tw-border-[var(--helb-outline-variant)] d-none">
-                <div id="relatesToOptions" class="link-selector-options"></div>
-              </div>
-            </div>
-            {% if form.relates_to_tickets.errors %}
-              <div class="invalid-feedback d-block">
-                {% for error in form.relates_to_tickets.errors %}<div>{{ error }}</div>{% endfor %}
-              </div>
-            {% endif %}
-          </div>
-
-          {# ── Attachments ── #}
-          {% if existing_attachments %}
-          <div class="form-group">
-            <label>Existing attachments</label>
-            {% for attachment in existing_attachments %}
-              <div class="tw-flex tw-items-center tw-justify-between tw-border tw-border-[var(--helb-outline-variant)] tw-rounded tw-px-3 tw-py-2 tw-mb-2">
-                <a href="{{ attachment.file.url }}" target="_blank" class="tw-truncate">{{ attachment.file.name|cut:"attachments/" }}</a>
-                <button type="submit" class="btn btn-sm btn-outline-danger tw-ml-3 tw-whitespace-nowrap" formaction="{% url 'ticket-attachment-delete' attachment.pk %}" formmethod="post" formnovalidate>Delete</button>
-              </div>
-            {% endfor %}
-          </div>
-          {% endif %}
-
-          {% if object %}
-            <div class="form-group">
-              <label for="id_attachments">Attachments</label>
-              <input
-                type="file"
-                class="form-control-file"
-                id="id_attachments"
-                name="attachments"
-                multiple
-                accept="image/png,image/jpeg,image/jpg,image/gif,image/webp"
-              />
-            </div>
-          {% endif %}
-
-        </div>{# end right column #}
-      </div>{# end grid #}
-
-      {# ── Submit bar ── #}
-      <div class="tw-sticky tw-bottom-0 tw-bg-[var(--helb-surface-container-lowest)] tw-border-t tw-border-[var(--helb-outline-variant)]
-                  tw-px-6 tw-py-4 tw-flex tw-justify-end tw-items-center tw-gap-4 tw-z-10">
-        <a class="tw-text-[var(--helb-on-surface-variant)] tw-no-underline tw-text-sm hover:tw-text-[var(--helb-on-surface)] tw-transition-colors tw-duration-150"
-           href="{% url 'blog-home' %}">
+      {# ── Submit Button ────────────────────────────────────────── #}
+      <div class="tw-px-6 tw-py-4 tw-flex tw-gap-3">
+        <button type="submit" class="tw-px-6 tw-py-2 tw-bg-[var(--helb-primary)] tw-text-[var(--helb-on-primary)] tw-rounded tw-font-semibold tw-transition-all hover:tw-shadow-lg">
+          {% if object %}Update{% else %}Create{% endif %}
+        </button>
+        <a href="{% url 'kanban' %}" class="tw-px-6 tw-py-2 tw-border tw-border-[var(--helb-outline-variant)] tw-text-[var(--helb-on-surface)] tw-rounded tw-font-semibold tw-transition-all hover:tw-bg-[var(--helb-surface-container)]">
           Cancel
         </a>
-        <button class="btn btn-outline-info tw-px-5 tw-py-2 tw-rounded tw-whitespace-nowrap tw-overflow-visible
-                       tw-transition-all tw-duration-200 hover:tw-scale-[1.03] hover:tw-shadow-lg
-                       focus:tw-ring-2 focus:tw-ring-[var(--helb-secondary)] focus:tw-ring-offset-1"
-                type="submit">
-          {% if object %}Update{% else %}Create ticket{% endif %}
-        </button>
       </div>
     </form>
   </div>
@@ -386,30 +229,57 @@
   }
   .link-selector-chip button:hover { color: var(--helb-on-surface); }
 
-  /* Issue type pill active states */
-  .issue-type-pill.is-active-EPIC {
-    background: var(--helb-on-primary-container); color: #fff;
-    border-color: var(--helb-on-primary-container);
-    transform: scale(1.05); box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  /* Issue type pill styles - distinct colors for each type */
+  .issue-type-pill[data-issue-type="EPIC"] {
+    background: rgba(156, 39, 176, 0.12); color: #C77DFF;
+    border-color: #C77DFF;
   }
-  .issue-type-pill.is-active-STORY {
-    background: var(--helb-on-tertiary-container); color: #fff;
-    border-color: var(--helb-on-tertiary-container);
-    transform: scale(1.05); box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  .issue-type-pill[data-issue-type="EPIC"].is-active-EPIC {
+    background: #C77DFF; color: #fff;
+    border-color: #C77DFF;
+    transform: scale(1.05); box-shadow: 0 2px 8px rgba(199, 125, 255, 0.4);
   }
-  .issue-type-pill.is-active-BUG {
-    background: var(--helb-error); color: #fff;
-    border-color: var(--helb-error);
-    transform: scale(1.05); box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  
+  .issue-type-pill[data-issue-type="STORY"] {
+    background: rgba(52, 211, 153, 0.12); color: #10B981;
+    border-color: #10B981;
   }
-  .issue-type-pill.is-active-TASK {
-    background: var(--helb-secondary); color: #fff;
-    border-color: var(--helb-secondary);
-    transform: scale(1.05); box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  .issue-type-pill[data-issue-type="STORY"].is-active-STORY {
+    background: #10B981; color: #fff;
+    border-color: #10B981;
+    transform: scale(1.05); box-shadow: 0 2px 8px rgba(16, 185, 129, 0.4);
+  }
+  
+  .issue-type-pill[data-issue-type="BUG"] {
+    background: rgba(239, 68, 68, 0.12); color: #EF4444;
+    border-color: #EF4444;
+  }
+  .issue-type-pill[data-issue-type="BUG"].is-active-BUG {
+    background: #EF4444; color: #fff;
+    border-color: #EF4444;
+    transform: scale(1.05); box-shadow: 0 2px 8px rgba(239, 68, 68, 0.4);
+  }
+  
+  .issue-type-pill[data-issue-type="TASK"] {
+    background: rgba(59, 130, 246, 0.12); color: #3B82F6;
+    border-color: #3B82F6;
+  }
+  .issue-type-pill[data-issue-type="TASK"].is-active-TASK {
+    background: #3B82F6; color: #fff;
+    border-color: #3B82F6;
+    transform: scale(1.05); box-shadow: 0 2px 8px rgba(59, 130, 246, 0.4);
   }
 </style>
 
 <script>
+  // Ticket templates for each issue type
+  const TEMPLATES = {
+    "STORY": "📖 USER STORY (As... I want... so that...)\n\nAs a <role/persona>,\nI want <action/feature>,\nso that <benefit/value>.\n\n✅ ACCEPTANCE CRITERIA:\n- Criteria 1: ...\n- Criteria 2: ...\n- Criteria 3: ...\n\n📎 RESOURCES / REFERENCES:\n- Link 1: ...\n\n🎯 NOTES:\n...",
+    "BUG": "🐛 BUG REPORT\n\n🔍 CONTEXT:\n- Environment: (dev/staging/prod)\n- Browser/Version:\n- Steps: ...\n\n❌ PROBLEM:\nWhat is not working correctly?\n\n✅ EXPECTED BEHAVIOR:\nWhat should happen instead?\n\n📸 ACTUAL RESULT:\nWhat did you observe? (screenshot/error)\n\n🔄 STEPS TO REPRODUCE:\n1. ...\n2. ...\n3. ...\n\n💾 ADDITIONAL INFORMATION:\n- App version:\n- Error log: ...",
+    "TASK": "☑️ TASK (Technical work)\n\n📋 DESCRIPTION:\nWhat do we need to do?\n\n🎯 OBJECTIVE:\nWhat is the expected outcome?\n\n📝 ITEMS TO COVER:\n- [ ] Item 1\n- [ ] Item 2\n- [ ] Item 3\n\n⚙️ TECHNICAL DETAILS:\n- Files to modify: ...\n- Dependencies: ...\n\n📎 REFERENCES:\n- PR: ...\n- Documentation: ...",
+    "EPIC": "🏔️ EPIC (Major initiative)\n\n📖 DESCRIPTION:\nWhat is this epic about?\n\n🎯 OBJECTIVES:\n- Objective 1: ...\n- Objective 2: ...\n\n📝 USER STORIES INCLUDED:\n- US#1: ...\n- US#2: ...\n\n⏱️ TIMELINE:\n- Phase 1: ...\n- Phase 2: ...\n\n📊 SUCCESS METRICS:\n- Metric 1: ...\n- Metric 2: ..."
+  };
+
   document.addEventListener("DOMContentLoaded", function () {
 
     /* ── Issue type pills ── */
@@ -1016,6 +886,13 @@
       const type = getSelectedIssueType();
       if (!type) {
         return;
+      }
+
+      // Update description template based on issue type
+      const descriptionField = document.getElementById("id_description");
+      if (descriptionField && !descriptionField.value) {
+        const template = TEMPLATES[type] || TEMPLATES.STORY;
+        descriptionField.placeholder = template;
       }
 
       const isEpic = type === "EPIC";

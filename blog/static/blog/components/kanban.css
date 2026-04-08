@@ -288,9 +288,9 @@
 }
 
 .analytics-chart-selector {
-  margin-top: 1rem;
+  margin-top: 1.5rem;
   display: flex;
-  gap: 1.5rem;
+  gap: 1rem;
   flex-wrap: wrap;
   border: none;
   padding: 0;
@@ -300,25 +300,65 @@
   display: none;
 }
 
+/* Modern Radio Button Styling */
 .analytics-chart-selector label {
   display: flex;
   align-items: center;
   gap: 0.5rem;
   cursor: pointer;
-  font-weight: 600;
-  color: var(--helb-on-surface);
+  font-weight: 500;
+  color: var(--helb-on-surface-variant);
   user-select: none;
-  transition: color 0.2s ease;
+  transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  border: 2px solid transparent;
 }
 
 .analytics-chart-selector label:hover {
-  color: var(--helb-primary);
+  color: var(--helb-on-surface);
+  background: var(--helb-surface-container-low);
+  border-color: var(--helb-outline-variant);
 }
 
 .analytics-chart-selector input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  min-width: 20px;
+  border: 2px solid var(--helb-outline);
+  border-radius: 50%;
   cursor: pointer;
-  accent-color: var(--helb-primary);
+  background: transparent;
+  transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
   margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.analytics-chart-selector input[type="radio"]:hover {
+  border-color: var(--helb-primary);
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+.analytics-chart-selector input[type="radio"]:checked {
+  border-color: var(--helb-primary);
+  background: var(--helb-primary);
+  box-shadow: inset 0 0 0 3px var(--helb-surface-container-lowest);
+}
+
+.analytics-chart-selector input[type="radio"]:checked + text,
+.analytics-chart-selector input[type="radio"]:checked ~ text {
+  color: var(--helb-primary);
+}
+
+/* Label text color change when radio is checked */
+.analytics-chart-selector label:has(input[type="radio"]:checked) {
+  color: var(--helb-on-surface);
+  background: var(--helb-surface-container-low);
+  border-color: var(--helb-primary);
 }
 
 @media (max-width: 768px) {
